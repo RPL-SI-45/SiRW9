@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('surat_online', function (Blueprint $table) {
             $table->id();
+            $table->enum("status_surat", ["menunggu", "disetujui", "ditolak"]);
+            $table->enum("jenis_kelamin", ["laki-laki", "perempuan"]);        
+            $table->enum("jenis_surat", ["izin", "kunjungan", "pindah", "lainnya"]);
+            $table->enum("agama", ["islam", "kristen", "katolik", "hindu", "budha", "konghucu"]);
+            $table->enum("status_perkawinan", ["belum kawin", "kawin", "cerai hidup", "cerai mati"]);
             $table->timestamps();
         });
     }
