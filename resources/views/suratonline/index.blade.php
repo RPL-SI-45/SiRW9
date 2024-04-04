@@ -1,30 +1,45 @@
 @extends('layouts.master')
 @section('content')
-<nav>
+<!-- <nav>
     <a class = "logo"> Surat Online</a>
     <ul>
         </li><a href="/suratonline">Home</a></li>
     </ul>
     <div class="nav-button">
-</nav>
+</nav> -->
 <div class = 'container'>
-<a class="btn btn-primary"href="/suratonline/create">Tambah Data</a>
+<a class="btn btn-primary"href="/admin/suratonline/create">Tambah Data</a>
 <table border = 1>
     <tr>
-    <th>status_surat</th>
-    <th>jenis_kelamin</th>
-    <th>jenis_surat</th>
-    <th>agama</th>
-    <th>status_perkawinan</th>
+    <th>Nama Lengkap</th>
+    <th>NIK</th>
+    <th>Keperluan</th>
+    <th>Jenis Surat</th>
+    <th>Tanggal Lahir</th>
+    <th>Umur</th>
+    <th>Status</th>
+    <th>Agama</th>
+    <th>Jenis Kelamin</th>
+    <th>Pekerjaan</th>
+    <th>Dokumen</th>
+    <th>Status Surat</th>
     </tr>
     @foreach($surat as $s)
     <tr>
-        <td>{{$s->status_surat}}</td>
-        <td>{{$s->jenis_kelamin}}</td>
+        <td>{{$s->nama_lengkap}}</td> 
+        <td>{{$s->nik}}</td> 
+        <td>{{$s->keperluan}}</td>
         <td>{{$s->jenis_surat}}</td>
+        <td>{{$s->tanggal_lahir}}</td>
+        <td>{{$s->umur}}</td> 
+        <td>{{$s->status}}</td>
         <td>{{$s->agama}}</td>
-        <td>{{$s->status_perkawinan}}</td>
+        <td>{{$s->jenis_kelamin}}</td>
+        <td>{{$s->pekerjaan}}</td>
+        <td>{{$s->dokumen}}</td>
+        <td>{{$s->status_surat}}</td>
     </tr>
     @endforeach
 </table>
 </div>
+@endsection
