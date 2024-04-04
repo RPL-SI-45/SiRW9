@@ -1,7 +1,7 @@
 <div class="container">
     <br>
     <h2>Masukkan Data Peminjaman Ruangan</h2>
-    <form action="/data-penduduk/{{$data_penduduk->id}}" method="POST">
+    <form action="/admin/data-penduduk/{{$data_penduduk->id}}" method="POST">
     @method('put')    
     @csrf
         <div class="mb-3">

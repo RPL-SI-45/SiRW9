@@ -19,9 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/data-penduduk', [data_pendudukController::class, 'index']);
-Route::get('/data-penduduk/create', [data_pendudukController::class, 'create']);
-Route::post('/data-penduduk/store', [data_pendudukController::class, 'store']);
-Route::get('/data-penduduk/{id}/edit', [data_pendudukController::class, 'edit']);
-Route::put('/data-penduduk/{id}', [data_pendudukController::class, 'update']);
-Route::delete('/data-penduduk/{id}', [data_pendudukController::class, 'destroy']);
+Route::get('/admin/data-penduduk', [data_pendudukController::class, 'index']);
+Route::get('/admin/data-penduduk/create', [data_pendudukController::class, 'create']);
+Route::post('/admin/data-penduduk/store', [data_pendudukController::class, 'store']);
+Route::get('/admin/data-penduduk/{id}/edit', [data_pendudukController::class, 'edit']);
+Route::put('/admin/data-penduduk/{id}', [data_pendudukController::class, 'update']);
+Route::delete('/admin/data-penduduk/{id}', [data_pendudukController::class, 'destroy']);

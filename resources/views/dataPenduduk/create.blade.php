@@ -1,7 +1,7 @@
 <div class="container">
     <br>
     <h2>Masukkan Data Peminjaman Ruangan</h2>
-    <form action="/data-penduduk/store" method="POST">
+    <form action="/admin/data-penduduk/store" method="POST">
         @csrf
         <div class="mb-3">
             <label>Nama Warga</label>

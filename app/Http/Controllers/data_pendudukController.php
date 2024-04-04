@@ -18,7 +18,7 @@ class data_pendudukController extends Controller
 
     public function store(Request $request){
         data_penduduk::create($request->except(['_token','submit']));
-        return redirect('/data-penduduk');
+        return redirect('/admin/data-penduduk');
     }
 
     public function edit($id){
@@ -29,13 +29,13 @@ class data_pendudukController extends Controller
     public function update($id, Request $request) {
         $data_penduduk = data_penduduk::find($id);
         $data_penduduk->update($request->except(['_token','submit']));
-        return redirect('/data-penduduk');
+        return redirect('/admin/data-penduduk');
     }
 
     public function destroy($id) {
         $data_penduduk = data_penduduk::find($id);
         $data_penduduk->delete();
-        return redirect('/data-penduduk');
+        return redirect('/admin/data-penduduk');
     }
 }
 
