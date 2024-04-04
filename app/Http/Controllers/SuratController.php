@@ -16,29 +16,28 @@ class SuratController extends Controller
     {
         return view('suratonline.create');
     }
-    ////////////////////////////////////////////
-    // public function store(Request $request){
-    //     // dd ($request->except(["_token"]));
-    //     Surat_online::create($request->except(["_token"]));
-    //     return redirect('/admin/suratonline');//kembali ke page surat_online
-    // }
-    // //function edit
-    // public function edit($id){
-    //     $surat_online = Surat_online::find($id);
-    //     return view('surat_online.edit', compact (['surat_online']));
-    // }
+    //////////////////////////////////////////
+    public function store(Request $request){
+        // dd ($request->except(["_token"]));
+        Surat_online::create($request->all());
+        // Surat_online::create($request->except([['_token','submit']]));
+        return redirect('/admin/suratonline');//kembali ke page surat_online
+    }
+    //function edit
+    public function edit($id){
+        $surat_online = Surat_online::find($id);
+        return view('surat_online.edit', compact (['surat_online']));
+    }
     
-    // public function update($id, Request $request){
-    //     $surat_online = Surat_online::find($id);
-    //     $surat_online->update($request->except(["_token", "_method"]));
-    //     return redirect('/admin/suratonline');
-    // }
+    public function update($id, Request $request){
+        $surat_online = Surat_online::find($id);
+        $surat_online->update($request->except(["_token", "_method"]));
+        return redirect('/admin/suratonline');
+    }
 
-    // public function destroy($id){
-    //     $surat_online = Surat_online::find($id);
-    //     $surat_online->delete();
-    //     return redirect('/admin/surat_online');
-    // }
-    //
-    
+    public function destroy($id){
+        $surat_online = Surat_online::find($id);
+        $surat_online->delete();
+        return redirect('/admin/surat_online');
+    }
 }

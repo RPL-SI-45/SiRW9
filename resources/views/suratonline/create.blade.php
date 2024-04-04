@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>MENAMBAH DATA WARGA RW9</h1>
-    <form action="/admin/surat_online/store" method="POST">
+    <form action="/admin/suratonline/store" method="POST">
         @csrf
         <div class="mb-3">
             <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
@@ -61,8 +61,8 @@
             <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
             <select class="form-select" id="jenis_kelamin" name="jenis_kelamin">
                 <option selected disabled>Jenis Kelamin</option>
-                <option value="L">Laki-Laki</option>
-                <option value="P">Perempuan</option>
+                <option value="laki-laki">Laki-Laki</option>
+                <option value="perempuan">Perempuan</option>
             </select>
         </div>
         <div class="mb-3">
