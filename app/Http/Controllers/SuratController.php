@@ -26,7 +26,7 @@ class SuratController extends Controller
     //function edit
     public function edit($id){
         $surat_online = Surat_online::find($id);
-        return view('surat_online.edit', compact (['surat_online']));
+        return view('suratonline.edit', compact (['surat_online']));
     }
     
     public function update($id, Request $request){
@@ -38,6 +38,6 @@ class SuratController extends Controller
     public function destroy($id){
         $surat_online = Surat_online::find($id);
         $surat_online->delete();
-        return redirect('/admin/surat_online');
+        return redirect('/admin/suratonline');
     }
 }

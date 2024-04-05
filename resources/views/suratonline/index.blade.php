@@ -38,6 +38,13 @@
         <td>{{$s->pekerjaan}}</td>
         <td>{{$s->dokumen}}</td>
         <td>{{$s->status_surat}}</td>
+        <td>
+            <a class ="btn btn-warning" href="/admin/suratonline/{{$s->id}}/edit/">Edit</a>
+            <form action="/admin/suratonline/{{$s->id}}" method="POST">
+                @csrf
+                @method('delete')
+                <input class="btn btn-danger" type="submit" value="Delete">
+            </form>
     </tr>
     @endforeach
 </table>
