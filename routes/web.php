@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IuranKasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [IuranKasController::class, 'index']);
+Route::get('/bayar', [IuranKasController::class, 'create']);
+Route::post('/bayar/store', [IuranKasController::class, 'store']);
