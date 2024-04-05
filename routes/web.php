@@ -1,6 +1,10 @@
 <?php
 
+
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Contollers\SuratController;
+use App\Models\surat_online;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/',function(){
     return view('welcome');
 });
+
+Route::get('/suratonline',[SuratController::class,'index' ]);
