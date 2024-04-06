@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h1>MENAMBAH DATA WARGA RW9</h1>
-    <form action="/admin/suratonline/store" method="POST">
+    <form action="/admin/suratonline/store" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
