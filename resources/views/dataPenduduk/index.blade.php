@@ -2,6 +2,12 @@
 @section('content')
     <div class="pagetitle" style="text-align: center;">
       <h1>Tabel Data Penduduk</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/admin/data-penduduk">Home</a></li>
+          <li class="breadcrumb-item active">Data Penduduk</li>
+        </ol>
+      </nav>
     </div>
     <section class="section">
       <div class="row">
@@ -9,7 +15,8 @@
           <div class="card">
             <div class="card-body">
               <br>
-              <a href="/admin/data-penduduk/create" class="btn btn-primary" class='card-title'>Tambah Data Penduduk</a>
+              <a href="/admin/data-penduduk/create" class="btn btn-primary" >Tambah Data Penduduk</a>
+              <br>
                     <table  class="table datatable">
                         <thead>
                             <tr >
