@@ -12,8 +12,15 @@ class SuratController extends Controller
         return view('suratOnline.index', compact(['surat_online']));
     }
 }
-
     public function create(){
-        $surat_online=surat_online::all();
-        return view('suratOnline.create', compact(['surat_online']));
+    $surat_online=surat_online::all();
+    return view('suratOnline.create', compact(['surat_online']));
 }
+
+    public function store(Request $request){
+    {
+        surat_online::create($request->except(['_token','submit']));
+        return redirect('/suratonline.index');
+    }
+}
+
