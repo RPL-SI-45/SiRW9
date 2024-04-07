@@ -21,4 +21,14 @@ Route::get('/',function(){
     return view('welcome');
 });
 
-Route::get('/suratonline',[SuratController::class,'index' ]);
+Route::get('/suratonline',function (){
+    return view('suratonline.index');
+});
+
+Route::get('/suratonline/create',function (){
+    return view('suratonline.create');
+});
+
+Route::POST('/suratonline/store',function (){
+    return view('suratonline.store');
+});
