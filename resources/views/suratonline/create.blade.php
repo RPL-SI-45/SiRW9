@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>MENAMBAH DATA WARGA RW9</h1>
+    <h1>MENAMBAH SURAT ONLINE</h1>
     <form action="/admin/suratonline/store" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
@@ -70,7 +70,7 @@
             <input type="text" class="form-control" id="pekerjaan" name="pekerjaan">
         </div>
         <div class="mb-3">
-            <label for="dokumen" class="form-label">Dokumen</label>
+            <label for="inputNumber" class="form-label">Dokumen</label>
             <input type="file" class="form-control" id="dokumen" name="dokumen">
         </div>
         <div class="mb-3">

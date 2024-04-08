@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>MENAMBAH DATA WARGA RW9</h1>
+    <h1>MENGEDIT SURAT ONLINE</h1>
     <form action="/admin/suratonline/{surat_online->id}" method="POST" enctype="multipart/form-data">
     @method("put")
     @csrf
