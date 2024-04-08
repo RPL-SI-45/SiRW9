@@ -25,7 +25,13 @@
                     </div>
                     <div class="col-md-2 mb-3">
                         <label>RT</label>
-                        <input name="RT" type="text" class="form-control" id="RT" aria-describedby="Isi RT Tempat Tinggal" value="{{$iurankas->RT}}">
+                        <select class="form-select" name="RT">
+                            <option value="">Pilih RT</option>
+                            <option value="1" @if($iurankas->RT=='1') selected @endif>1</option>
+                            <option value="2" @if($iurankas->RT=='2') selected @endif>2</option>
+                            <option value="3" @if($iurankas->RT=='3') selected @endif>3</option>
+                            <option value="4" @if($iurankas->RT=='4') selected @endif>4</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label>Tanggal Bayar</label>
