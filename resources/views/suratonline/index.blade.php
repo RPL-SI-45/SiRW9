@@ -37,7 +37,7 @@
         <td>{{$s->jenis_kelamin}}</td>
         <td>{{$s->pekerjaan}}</td>
         <td>
-            <img src="{{asset($s->dokumen)}}" style="width: 100%;height: 100%;">
+            <!-- <img src="{{asset($s->dokumen)}}" style="width: 100%;height: 100%;"> -->
             <a href="{{ asset($s->dokumen) }}" target="_blank">Lihat Dokumen</a>
         </td>
         <!-- <td>{{$s->dokumen}}</td> -->

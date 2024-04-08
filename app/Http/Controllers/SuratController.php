@@ -42,7 +42,7 @@ class SuratController extends Controller
     }
     public function store(Request $request){
         $request->validate([
-            'dokumen' => 'mimes:png,jpg,jpeg,webp'
+            'dokumen' => 'mimes:png,jpg,jpeg,webp,pdf,docx'
         ]);
 
         if ($request->has('dokumen')) {
