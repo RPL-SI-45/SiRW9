@@ -14,7 +14,7 @@
     <section class="inner-page">
       <div class="container">
         <p>
-          TERKIRIM ...
+          TERKIRIM ....
         </p>
       </div>
     </section>
