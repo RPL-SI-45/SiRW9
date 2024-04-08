@@ -1,10 +1,10 @@
-@extends('layouts.admin')
+@extends('layouts.guest')
 @section('content')
     <div class="pagetitle">
       <h1>PERMOHONAN SURAT</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/admin/suratonline">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
           <li class="breadcrumb-item active">PERMOHONAN SURAT</li>
         </ol>
       </nav>

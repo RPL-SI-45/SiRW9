@@ -18,5 +18,4 @@
         </p>
       </div>
     </section>
-    
 @endsection
