@@ -136,7 +136,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link " href="pages-blank.html">
+        <a class="nav-link collapsed " href="pages-blank.html">
           <i class="bi bi-file-earmark"></i>
           <span>Berita Kegiatan</span>
         </a>
