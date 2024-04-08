@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/iurankas', [IuranKasController::class, 'index']);
-
-Route::get('/iurankas/create', [IuranKasController::class, 'create']);
-
-Route::post('/iurankas/store', [IuranKasController::class, 'store']);
+Route::get('/admin/iurankas', [IuranKasController::class, 'index']);
+Route::get('/admin/iurankas/create', [IuranKasController::class, 'create']);
+Route::post('/admin/iurankas/store', [IuranKasController::class, 'store']);
+Route::get('/admin/iurankas/edit/{id}', [IuranKasController::class, 'edit']);
+Route::put('/admin/iurankas/update/{id}', [IuranKasController::class, 'update']);
+Route::delete('/admin/iurankas/delete/{id}', [IuranKasController::class, 'destroy']);
