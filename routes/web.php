@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Models\data_penduduk;
 use Illuminate\Support\Facades\Route;
@@ -15,10 +16,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//iurankas
+Route::get('/admin/iurankas', [IuranKasController::class, 'index']);
+Route::get('/admin/iurankas/create', [IuranKasController::class, 'create']);
+Route::post('/admin/iurankas/store', [IuranKasController::class, 'store']);
+Route::get('/admin/iurankas/edit/{id}', [IuranKasController::class, 'edit']);
+Route::put('/admin/iurankas/update/{id}', [IuranKasController::class, 'update']);
+Route::delete('/admin/iurankas/delete/{id}', [IuranKasController::class, 'destroy']);
 Route::get('/', function () {
     return view('welcome');
 });
 
+//datapenduduk
 Route::get('/admin/data-penduduk', [data_pendudukController::class, 'index']);
 Route::get('/admin/data-penduduk/create', [data_pendudukController::class, 'create']);
 Route::post('/admin/data-penduduk/store', [data_pendudukController::class, 'store']);
