@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.admin')
 @section('content')
 <!-- <nav>
     <a class = "logo"> Surat Online</a>
@@ -43,7 +43,8 @@
             <form action="/admin/suratonline/{{$s->id}}" method="POST">
                 @csrf
                 @method('delete')
-                <input class="btn btn-danger" type="submit" value="Delete">
+                <!-- <input class="btn btn-danger" type="submit" value="Delete"> -->
+                <input class="btn btn-danger btn-sm" type="submit" value='Delete🗑️' onclick="confirm('Hapus Data?')">
             </form>
     </tr>
     @endforeach

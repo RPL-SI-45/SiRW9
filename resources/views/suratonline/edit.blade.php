@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -70,10 +70,10 @@
             <label for="pekerjaan" class="form-label">Pekerjaan</label>
             <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" value="{{$surat_online->pekerjaan}}">
         </div>
-        <!-- <div class="mb-3">
+        <div class="mb-3">
             <label for="dokumen" class="form-label">Dokumen</label>
             <input type="file" class="form-control" id="dokumen" name="dokumen" value="{{$surat_online->dokumen}}">
-        </div> -->
+        </div>
         <div class="mb-3">
             <label for="status_surat" class="form-label">Status Surat</label>
             <select class="form-select" id="status_surat" name="status_surat">
