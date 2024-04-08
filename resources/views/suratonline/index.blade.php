@@ -14,7 +14,7 @@
           <div class="card">
             <div class="card-body">
               <br>
-              <a href="/admin/suratonline/create" class="btn btn-primary"> Data Iuran Kas</a>
+              <a href="/admin/suratonline/create" class="btn btn-primary">Data Surat Online</a>
               <br>
                     <table  class="table datatable">
                         <thead>
@@ -54,8 +54,8 @@
                                 </td>
                                 <td>{{$s->surat_online}}</td>
                                 <td style="display: flex; gap: 5px; justify-content:center">
-                                    <a href="/admin/suratonline/edit/{{$ik->id}}" class="btn btn-warning btn-sm">Edit✏️</a>
-                                    <form action="/admin/suratonline/delete/{{$ik->id}}" method="POST">
+                                    <a href="/admin/suratonline/edit/{{$s->id}}" class="btn btn-warning btn-sm">Edit✏️</a>
+                                    <form action="/admin/suratonline/delete/{{$s->id}}" method="POST">
                                         @csrf
                                         @method('delete')
                                         <input class="btn btn-danger btn-sm" type="submit" value='Delete🗑️' onclick="confirm('Hapus Data Surat Online?')">
@@ -66,7 +66,6 @@
                     </table>
             </div>
           </div>
-
         </div>
       </div>
     </section>
