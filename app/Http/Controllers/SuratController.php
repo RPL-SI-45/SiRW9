@@ -9,6 +9,6 @@ class SuratController extends Controller
 {
     public function index(){
         $surat_online = Surat_online::all();
-        return view('suratonline.index', compact(['suratonline']));
+        return view('suratonline.index', compact(['surat_online']));
     }
 }
