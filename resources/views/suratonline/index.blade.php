@@ -1,5 +1,11 @@
 @extends('layouts.admin')
 @section('content')
+    <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/admin/data-penduduk">Home</a></li>
+          <li class="breadcrumb-item active">Surat Online</li>
+        </ol>
+    </nav>
     <div class="pagetitle" style="text-align: center;">
       <h1>SURAT ONLINE RW09</h1>
       <nav>
@@ -50,7 +56,7 @@
                                 <td>{{$s->dokumen}}</td>
                                 <td>{{$s->status_surat}}</td>
                                 <td>
-                                    <img src="{{asset($s->suratonline)}}" style="width: 90px;height: 160px;">
+                                    <a href="{{ asset($s->dokumen) }}" target="_blank">Lihat Dokumen</a> 
                                 </td>
                                 <td>{{$s->surat_online}}</td>
                                 <td style="display: flex; gap: 5px; justify-content:center">
