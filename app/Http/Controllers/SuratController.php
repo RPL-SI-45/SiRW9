@@ -45,7 +45,7 @@ class SuratController extends Controller
                 'status_surat' => $request->status_surat
             ]);
         }
-        return redirect('/admin/suratonline');
+        return redirect('/suratonline/store');
     }
 }    
 
