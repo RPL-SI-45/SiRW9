@@ -29,7 +29,7 @@
                             <option value="agama">Agama</option>
                             <option value="islam">Islam</option>
                             <option value="kristen">Kristen</option>
-                            <option value="kastolik">Katolik</option>
+                            <option value="katolik">Katolik</option>
                             <option value="hindu">Hindu</option>
                             <option value="budha">Budha</option>
                             <option value="konghucu">Konghucu</option>
