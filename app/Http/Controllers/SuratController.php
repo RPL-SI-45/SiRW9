@@ -46,7 +46,7 @@ class SuratController extends Controller
 
             ]);
         }
-        return redirect('/suratonline/store');
+        return view('suratonline.store');
     }
 }    
 
