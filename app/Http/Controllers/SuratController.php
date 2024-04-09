@@ -42,7 +42,7 @@ class SuratController extends Controller
                 'jenis_kelamin' => $request->jenis_kelamin,
                 'pekerjaan' => $request->pekerjaan,
                 'dokumen' => $path.$filename,
-                'status_surat'=> $request->menunggu,
+                'status_surat'=>'menunggu',
 
             ]);
         }

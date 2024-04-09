@@ -51,7 +51,7 @@
                     </div>
                     <div class="mb-3">
                         <label>Jenis Surat</label>
-                        <input name="jenis_surat" type="text" class="form-control" id="jenis_surat" aria-describedby="Jenis Surat">
+                        <input name="jenis_surat" type="enum" class="form-control" id="jenis_surat" aria-describedby="Jenis Surat">
                     </div>
                     <div class="mb-3">
                         <label>Keperluan</label>
