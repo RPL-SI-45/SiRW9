@@ -58,8 +58,8 @@
                         <label>Jenis Kelamin</label>
                         <select class="form-select" name="jenis_kelamin">
                             <option value="">Jenis Kelamin</option>
-                            <option value="P">Perempuan</option>
-                            <option value="L">Laki - Laki</option>
+                            <option value="perempuan">Perempuan</option>
+                            <option value="laki-laki">Laki - Laki</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -69,12 +69,6 @@
                     <div class="mb-3">
                         <label>Pekerjaan</label>
                         <input name="pekerjaan" type="text" class="form-control" id="pekerjaan" aria-describedby="Pekerjaan Anda">
-                    </div>
-                    <div class="mb-3">
-                        <label for="inputNumber" class="col-sm-2 col-form-label">Dokumen</label>
-                        <div class="col-sm-12">
-                            <input class="form-control" type="file" name="dokumen">
-                        </div>
                     </div>
                     <div class="mb-3">
                         <label>Jenis Surat</label>
@@ -89,6 +83,12 @@
                     <div class="mb-3">
                         <label>Keperluan</label>
                         <input name="keperluan" type="text" class="form-control" id="keperluan" aria-describedby="Keperluan">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputNumber" class="col-sm-2 col-form-label">Dokumen</label>
+                        <div class="col-sm-12">
+                            <input class="form-control" type="file" name="dokumen">
+                        </div>
                     </div>
                     <div class="text-center">
                         <input type="submit" name="submit" class="btn btn-primary" value='Buat Surat'> 
