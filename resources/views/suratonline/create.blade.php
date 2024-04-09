@@ -24,8 +24,33 @@
                         <input name="nik" type="text" class="form-control" id="nik" aria-describedby="NIK Anda">
                     </div>
                     <div class="mb-3">
+                        <label>Agama</label>
+                        <select class="form-select" name="agama">
+                            <option value="islam">Islam</option>
+                            <option value="kristen">Kristen</option>
+                            <option value="kastolik">Katolik</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="budha">Budha</option>
+                            <option value="konghucu">Konghucu</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label>Tanggal Lahir</label>
                         <input name="tanggal_lahir" type="date" class="form-control" id="tanggal_lahir" aria-describedby="Tanggal Lahir Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label>Umur</label>
+                        <input name="umur" type="date" class="form-control" id="umur" aria-describedby="Umur Lahir Anda">
+                    </div>
+                    <div class="mb-3">
+                        <label>Status Perkawinan</label>
+                        <select class="form-select" name="status">
+                            <option value="">Status Perkawinan</option>
+                            <option value="belum kawin">Belum Kawin</option>
+                            <option value="sudah kawin">Sudah Kawin</option>
+                            <option value="cerai hidup">Cerai Hidup</option>
+                            <option value="cerai mati">Cerai Mati</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label>Jenis Kelamin</label>
