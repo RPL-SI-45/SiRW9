@@ -97,7 +97,7 @@
       </li><!-- End Data Penduduk Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index.html">
+        <a class="nav-link collapsed" href="/admin/suratonline">
           <i class="bi bi-file-earmark"></i>
           <span>Surat Online</span>
         </a>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
+use App\Http\Controllers\SuratController;
 use App\Models\data_penduduk;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,9 @@ Route::post('/admin/data-penduduk/store', [data_pendudukController::class, 'stor
 Route::get('/admin/data-penduduk/{id}/edit', [data_pendudukController::class, 'edit']);
 Route::put('/admin/data-penduduk/{id}', [data_pendudukController::class, 'update']);
 Route::delete('/admin/data-penduduk/{id}', [data_pendudukController::class, 'destroy']);
+
+//suratonline
+
+Route::get('/admin/suratonline', [SuratController::class, 'index']);
+Route::get('/suratonline/create', [SuratController::class, 'create']);
+Route::post('/suratonline/store', [SuratController::class, 'gstore']);

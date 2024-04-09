@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Favicons -->
-    <link href="assets/img/logo.png" rel="icon">
-    <link href="assets/img/logo.png" rel="apple-touch-icon">
+    <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
+    <link href="{{ asset('assets/img/logo.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assetsG/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assetsG/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assetsG/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assetsG/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assetsG/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assetsG/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assetsG/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ asset('assetsG/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ asset('assetsG/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assetsG/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assetsG/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assetsG/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assetsG/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ asset('assetsG/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
 
-    <!-- Template Main CSS File -->
-    <link href="assetsG/css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{{ asset('assetsG/css/style.css') }}" rel="stylesheet">
 </head>
 <body>
   <!-- ======= Header ======= -->
@@ -137,16 +137,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assetsG/vendor/aos/aos.js"></script>
-  <script src="assetsG/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assetsG/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assetsG/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assetsG/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assetsG/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assetsG/vendor/php-email-form/validate.js"></script>
+  <script src="{{ asset('assetsG/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('assetsG/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assetsG/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('assetsG/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ asset('assetsG/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ asset('assetsG/vendor/waypoints/noframework.waypoints.js') }}"></script>
+  <script src="{{ asset('assetsG/vendor/php-email-form/validate.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assetsG/js/main.js"></script>
+  <script src="{{ asset('assetsG/js/main.js') }}"></script>
 
 </body>
 </html>
