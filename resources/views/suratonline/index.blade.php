@@ -1,16 +1,11 @@
 @extends('layouts.admin')
 @section('content')
-    <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/admin/data-penduduk">Home</a></li>
-          <li class="breadcrumb-item active">Surat Online</li>
-        </ol>
-    </nav>
     <div class="pagetitle" style="text-align: center;">
       <h1>SURAT ONLINE RW09</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/admin/suratonline">Home</a></li>
+          <li class="breadcrumb-item"><a href="/admin/data-penduduk">Home</a></li>
+          <li class="breadcrumb-item active">Surat Online</li>
         </ol>
       </nav>
     </div>
@@ -18,7 +13,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="card">
-            <div class="card-body">
+            <div class="card-body" style="overflow: visible;">
               <br>
               <a href="/admin/suratonline/create" class="btn btn-primary">Data Surat Online</a>
               <br>
@@ -53,12 +48,10 @@
                                 <td>{{$s->agama}}</td>
                                 <td>{{$s->jenis_kelamin}}</td>
                                 <td>{{$s->pekerjaan}}</td>
-                                <td>{{$s->dokumen}}</td>
-                                <td>{{$s->status_surat}}</td>
                                 <td>
                                     <a href="{{ asset($s->dokumen) }}" target="_blank">Lihat Dokumen</a> 
                                 </td>
-                                <td>{{$s->surat_online}}</td>
+                                <td>{{$s->status_surat}}</td>
                                 <td style="display: flex; gap: 5px; justify-content:center">
                                     <a href="/admin/suratonline/edit/{{$s->id}}" class="btn btn-warning btn-sm">Edit✏️</a>
                                     <form action="/admin/suratonline/delete/{{$s->id}}" method="POST">
