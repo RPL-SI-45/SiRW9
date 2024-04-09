@@ -1,11 +1,11 @@
 @extends('layouts.guest')
 @section('content')
     <div class="pagetitle">
-      <h1>PERMOHONAN SURAT</h1>
+      <h1> Permohonan Surat</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">PERMOHONAN SURAT</li>
+          <li class="breadcrumb-item active">Permohonan Surat</li>
         </ol>
       </nav>
     </div>
@@ -13,7 +13,7 @@
         <div class="card-body">
               <h5 class="card-title">Lihatlah Panduan Pembuatan Surat Pada</h5><br>
               <h5><i>link panduan permohonan</h5></i>
-                <form class="row g-3" action="/suratonline/store" method="POST" enctype="multipart/form-data">
+                <form method="POST" action="/suratonline/store" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label>Nama Lengkap</label>
