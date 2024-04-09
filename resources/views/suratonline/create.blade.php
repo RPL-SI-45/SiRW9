@@ -77,7 +77,7 @@
                             <option value="izin">Izin</option>
                             <option value="kunjungan">Kunjungan</option>
                             <option value="pindah">Pindah</option>
-                            <option value="lainnya">Pindah</option>
+                            <option value="lainnya">Lainnya</option>
                         </select>
                     </div>
                     <div class="mb-3">
