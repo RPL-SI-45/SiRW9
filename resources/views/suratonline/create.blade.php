@@ -26,12 +26,14 @@
                     <div class="mb-3">
                         <label>Agama</label>
                         <select class="form-select" name="agama">
+                            <option value="agama">Agama</option>
                             <option value="islam">Islam</option>
                             <option value="kristen">Kristen</option>
                             <option value="kastolik">Katolik</option>
                             <option value="hindu">Hindu</option>
                             <option value="budha">Budha</option>
                             <option value="konghucu">Konghucu</option>
+                            
                         </select>
                     </div>
                     <div class="mb-3">
@@ -40,7 +42,7 @@
                     </div>
                     <div class="mb-3">
                         <label>Umur</label>
-                        <input name="umur" type="date" class="form-control" id="umur" aria-describedby="Umur Lahir Anda">
+                        <input name="umur" type="text" class="form-control" id="umur" aria-describedby="Umur Lahir Anda">
                     </div>
                     <div class="mb-3">
                         <label>Status Perkawinan</label>
