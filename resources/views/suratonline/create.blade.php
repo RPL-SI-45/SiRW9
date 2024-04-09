@@ -49,7 +49,7 @@
                         <select class="form-select" name="status">
                             <option value="">Status Perkawinan</option>
                             <option value="belum kawin">Belum Kawin</option>
-                            <option value="sudah kawin">Sudah Kawin</option>
+                            <option value="kawin">Kawin</option>
                             <option value="cerai hidup">Cerai Hidup</option>
                             <option value="cerai mati">Cerai Mati</option>
                         </select>
