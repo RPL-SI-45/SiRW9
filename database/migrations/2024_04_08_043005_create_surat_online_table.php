@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('surat_online', function (Blueprint $table) {
             $table->id();
             $table->string("nama_lengkap", 100);
-            $table->integer('nik');
+            $table->string('nik');
             $table->string("keperluan");
             $table->enum("jenis_surat", ["izin", "kunjungan", "pindah", "lainnya"]);
             $table->string("tanggal_lahir", 100);

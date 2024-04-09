@@ -51,7 +51,13 @@
                     </div>
                     <div class="mb-3">
                         <label>Jenis Surat</label>
-                        <input name="jenis_surat" type="enum" class="form-control" id="jenis_surat" aria-describedby="Jenis Surat">
+                        <select class="form-select" name="jenis_surat">
+                            <option value="">Jenis Surat</option>
+                            <option value="izin">Izin</option>
+                            <option value="kunjungan">Kunjungan</option>
+                            <option value="pindah">Pindah</option>
+                            <option value="lainnya">Pindah</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label>Keperluan</label>
