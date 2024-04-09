@@ -15,7 +15,7 @@ class SuratController extends Controller
         $surat_online = Surat_online::all();
         return view('suratonline.create', compact(['surat_online']));
     }
-    public function store(Request $request){
+    public function gstore(Request $request){
         $request->validate([
             'dokumen' => 'mimes:png,jpg,jpeg,webp,pdf,docx'
         ]);
@@ -42,7 +42,8 @@ class SuratController extends Controller
                 'jenis_kelamin' => $request->jenis_kelamin,
                 'pekerjaan' => $request->pekerjaan,
                 'dokumen' => $path.$filename,
-                'status_surat' => $request->status_surat
+                'status_surat'=> $request->menunggu,
+
             ]);
         }
         return redirect('/suratonline/store');

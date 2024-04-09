@@ -23,7 +23,7 @@
                         <label>NIK</label>
                         <input name="nik" type="text" class="form-control" id="nik" aria-describedby="NIK Anda">
                     </div>
-                    <div class="col-md-2 mb-3">
+                    <div class="mb-3">
                         <label>Tanggal Lahir</label>
                         <input name="tanggal_lahir" type="date" class="form-control" id="tanggal_lahir" aria-describedby="Tanggal Lahir Anda">
                     </div>
@@ -35,7 +35,7 @@
                             <option value="L">Laki - Laki</option>
                         </select>
                     </div>
-                    <div class="mb-3 col-md-6">
+                    <div class="mb-3">
                         <label>Alamat</label>
                         <input name="alamat" type="text" class="form-control" id="alamat" aria-describedby="Alamat Anda">
                     </div>
@@ -49,7 +49,11 @@
                             <input class="form-control" type="file" name="dokumen">
                         </div>
                     </div>
-                    <div class="mb-3 col-md-6">
+                    <div class="mb-3">
+                        <label>Jenis Surat</label>
+                        <input name="jenis_surat" type="text" class="form-control" id="jenis_surat" aria-describedby="Jenis Surat">
+                    </div>
+                    <div class="mb-3">
                         <label>Keperluan</label>
                         <input name="keperluan" type="text" class="form-control" id="keperluan" aria-describedby="Keperluan">
                     </div>

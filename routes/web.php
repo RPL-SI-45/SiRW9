@@ -31,4 +31,4 @@ Route::delete('/admin/data-penduduk/{id}', [data_pendudukController::class, 'des
 
 Route::get('/admin/suratonline', [SuratController::class, 'index']);
 Route::get('/suratonline/create', [SuratController::class, 'create']);
-Route::post('/suratonline/store', [SuratController::class, 'store']);
+Route::post('/suratonline/store', [SuratController::class, 'gstore']);
