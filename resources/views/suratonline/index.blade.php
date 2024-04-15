@@ -53,8 +53,8 @@
                                 </td>
                                 <td>{{$s->status_surat}}</td>
                                 <td style="display: flex; gap: 5px; justify-content:center">
-                                    <a href="/admin/suratonline/edit/{{$s->id}}" class="btn btn-warning btn-sm">Edit✏️</a>
-                                    <form action="/admin/suratonline/delete/{{$s->id}}" method="POST">
+                                    <a href="/admin/suratonline/{{$s->id}}}/edit" class="btn btn-warning btn-sm">Edit✏️</a>
+                                    <form action="/admin/suratonline/{{$s->id}}" method="POST">
                                         @csrf
                                         @method('delete')
                                         <input class="btn btn-danger btn-sm" type="submit" value='Delete🗑️' onclick="confirm('Hapus Data Surat Online?')">
