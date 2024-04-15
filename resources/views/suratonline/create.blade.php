@@ -1,9 +1,20 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class="container">
+<div class="pagetitle">
     <h1>MENAMBAH SURAT ONLINE</h1>
-    <form action="/admin/suratonline/store" method="POST" enctype="multipart/form-data">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin/suratonline">Home</a></li>
+            <li class="breadcrumb-item active">Surat Online</li>
+            <li class="breadcrumb-item active">Menambah Surat Online</li>
+        </ol>
+    </nav>
+</div>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Masukkan surat baru</h5>
+        <form action="/admin/suratonline/store" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
@@ -85,4 +96,17 @@
         <button type="submit" class="btn btn-primary">Tambah Data</button>
     </form>
 </div>
+<script>
+    document.getElementById("suratOnlineform").addEventListener("submit", function(event) {
+        
+        var form = event.target;
+        if (!form.checkValidity()){
+            event.preventDefault();
+            event.stopPropagation();
+            //Notifikasi data tidak boleh kosong
+            alert("Please fill out all required fields.");
+        }
+        form.classList.add('was-validated');
+    });
+</script>
 @endsection
