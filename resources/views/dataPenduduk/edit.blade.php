@@ -32,8 +32,8 @@
                         <label>Jenis Kelamin</label>
                         <select class="form-select" name="Jenis_Kelamin">
                             <option value="">Pilih Jenis Kelamin</option>
-                            <option value="Pria" @if($data_penduduk->Jenis_Kelamin=='Pria') selected @endif>Pria</option>
-                            <option value="Wanita" @if($data_penduduk->Jenis_Kelamin=='Wanita') selected @endif>Wanita</option>
+                            <option value="Perempuan" @if($data_penduduk->Jenis_Kelamin=='Perempuan') selected @endif>Perempuan</option>
+                            <option value="Laki-Laki" @if($data_penduduk->Jenis_Kelamin=='Laki-Laki') selected @endif>Laki - Laki</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -56,6 +56,8 @@
                             <option value="">Pilih Status Perkawinan</option>
                             <option value="Belum Kawin" @if($data_penduduk->Status_Perkawinan=='Belum Kawin') selected @endif>Belum Kawin</option>
                             <option value="Kawin" @if($data_penduduk->Status_Perkawinan=='Kawin') selected @endif>Kawin</option>
+                            <option value="cerai hidup" @if($data_penduduk->Status_Perkawinan=='Cerai Hidup') selected @endif>Cerai Hidup</option>
+                            <option value="cerai mati" @if($data_penduduk->Status_Perkawinan=='Cerai Mati') selected @endif>Cerai Mati</option>
                         </select>
                     </div>
                     <div class="mb-3">

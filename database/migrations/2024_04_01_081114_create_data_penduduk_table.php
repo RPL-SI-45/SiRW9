@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('data_penduduk', function (Blueprint $table) {
             $table->id();
             $table->string("NIK");
-            $table->enum('Jenis_Kelamin',['Pria','Wanita']);
+            $table->enum('Jenis_Kelamin',["Laki-Laki", "Perempuan"]);
             $table->string('Nama_Warga');
             $table->date('Tanggal_Lahir');
             $table->string('Alamat');
             $table->enum('RT',['1','2','3','4']);
-            $table->enum('Status_Perkawinan',['Belum Kawin','Kawin']);
+            $table->enum('Status_Perkawinan',['Belum Kawin','Kawin',"Cerai Hidup", "Cerai Mati"]);
             $table->string('Pekerjaan');
             $table->timestamps();
         });
