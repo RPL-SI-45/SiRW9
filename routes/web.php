@@ -21,7 +21,7 @@ Route::get('/', function () {
 //     return 'test';
 // });
 Route::get('/admin/suratonline', [SuratController::class, 'index']);
-Route::get('/admin/suratonline/create', [SuratController::class, 'create']);
+Route::get('/admin/suratonline/create', [SuratController::class, 'admincreate']);
 Route::post('/admin/suratonline/store', [SuratController::class, 'store']);
 Route::get('/admin/suratonline/{id}/edit', [SuratController::class, 'edit']);
 Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);

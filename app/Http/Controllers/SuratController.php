@@ -13,7 +13,7 @@ class SuratController extends Controller
         return view('suratonline.index', compact('surat'));
         // dd($surat);
     }
-    public function create()
+    public function admincreate()
     {
         return view('suratonline.admincreate');
     }
