@@ -15,7 +15,7 @@ class SuratController extends Controller
     }
     public function create()
     {
-        return view('suratonline.create');
+        return view('suratonline.admincreate');
     }
 
     //function store

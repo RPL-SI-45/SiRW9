@@ -12,7 +12,7 @@
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/admin/suratonline">Home</a></li>
-            <li class="breadcrumb-item active">Data Penduduk</li>
+            <li class="breadcrumb-item active">Surat Online</li>
         </ol>
     </nav>
 </div>
@@ -25,7 +25,7 @@
                     <a class="btn btn-primary"href="/admin/suratonline/create">Tambah Data</a>
                     <br>
                         <table class="table datatable">
-                            <thread>
+                            <thead>
                                 <tr>
                                     <th>Nama Lengkap</th>
                                     <th>NIK</th>
@@ -41,7 +41,7 @@
                                     <th>Status Surat</th>
                                     <th>Action</th>
                                 </tr>
-                            </thread>
+                            </thead>
                             @foreach($surat as $s)
                                 <tr>
                                     <td>{{$s->nama_lengkap}}</td>
@@ -59,8 +59,8 @@
                                     </td>
                                     <td>{{$s->status_surat}}</td>
                                     <td>
-                                        <a class="btn btn-warning" href="/admin/suratonline/{{$s->id}}/edit">Edit</a>
                                         <form action="/admin/suratonline/{{$s->id}}" method="POST">
+                                            <a class="btn btn-warning" href="/admin/suratonline/{{$s->id}}/edit">Edit</a>
                                             @csrf
                                             @method('delete')
                                             <input class="btn btn-danger btn-sm" type="submit" value='Delete🗑️' onclick="confirm('Hapus Data?')">

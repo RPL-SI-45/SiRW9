@@ -14,8 +14,9 @@
 <div class="card">
     <div class="card-body">
         <h5 class="card-title">Edit surat online</h5>
-            <form action="/admin/suratonline/{surat_online->id}" method="POST" enctype="multipart/form-data">
-            @method("put")
+            <form action="/admin/suratonline/{{$surat_online->id}}" method="POST" enctype="multipart/form-data">
+            <!-- <form action="/admin/suratonline/{{$surat_online->id}}" method="POST" enctype="multipart/form-data"> -->
+            @method("PUT")
             @csrf
                 <div class="mb-3">
                     <label for="nama_lengkap" class="form-label">Nama Lengkap</label>
@@ -83,7 +84,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="dokumen" class="form-label">Dokumen</label>
-                    <input type="file" class="form-control" id="dokumen" name="dokumen" value="{{$surat_online->dokumen}}">
+                    <input type="file" class="form-control" id="dokumen" name="dokumen">
                     @if($surat_online->dokumen)
                             <a href="{{ asset($surat_online->dokumen) }}">{{$surat_online->dokumen}}</a>
                             @else
