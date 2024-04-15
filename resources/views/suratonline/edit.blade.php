@@ -84,6 +84,11 @@
                 <div class="mb-3">
                     <label for="dokumen" class="form-label">Dokumen</label>
                     <input type="file" class="form-control" id="dokumen" name="dokumen" value="{{$surat_online->dokumen}}">
+                    @if($surat_online->dokumen)
+                            <a href="{{ asset($surat_online->dokumen) }}">{{$surat_online->dokumen}}</a>
+                            @else
+                                <p>Belum ada surat yang diupload</p>
+                            @endif
                 </div>
                 <div class="mb-3">
                     <label for="status_surat" class="form-label">Status Surat</label>
