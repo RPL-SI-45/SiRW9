@@ -29,7 +29,7 @@
                                 <th>RT</th>
                                 <th>Status Perkawinan</th>
                                 <th>Pekerjaan</th>
-                                <th> </th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         @foreach($data_penduduk as $dp)

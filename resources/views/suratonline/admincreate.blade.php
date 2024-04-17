@@ -31,7 +31,7 @@
         <div class="mb-3">
             <label for="jenis_surat" class="form-label">Jenis Surat</label>
             <select class="form-select" id="jenis_surat" name="jenis_surat" required>
-                <option selected disabled>Jenis Surat</option>
+                <option value="">Jenis Surat</option>
                 <option value="izin">Izin</option>
                 <option value="kunjungan">Kunjungan</option>
                 <option value="pindah">Pindah</option>
@@ -49,7 +49,7 @@
         <div class="mb-3">
             <label for="status" class="form-label">Status</label>
             <select class="form-select" id="status" name="status" required>
-                <option selected disabled>Status</option>
+                <option value="">Status</option>
                 <option value="belum kawin">Belum Kawin</option>
                 <option value="kawin">Kawin</option>
                 <option value="cerai hidup">Cerai Hidup</option>
@@ -59,7 +59,7 @@
         <div class="mb-3">
             <label for="agama" class="form-label">Agama</label>
             <select class="form-select" id="agama" name="agama" required>
-                <option selected disabled>Agama</option>
+                <option value="">Agama</option>
                 <option value="islam">Islam</option>
                 <option value="kristen">Kristen</option>
                 <option value="katolik">Katolik</option>
@@ -71,7 +71,7 @@
         <div class="mb-3">
             <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
             <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
-                <option selected disabled>Jenis Kelamin</option>
+                <option value="">Jenis Kelamin</option>
                 <option value="laki-laki">Laki-Laki</option>
                 <option value="perempuan">Perempuan</option>
             </select>
@@ -87,7 +87,7 @@
         <div class="mb-3">
             <label for="status_surat" class="form-label">Status Surat</label>
             <select class="form-select" id="status_surat" name="status_surat" required>
-                <option selected disabled>Status Surat</option>
+                <option value="">Status Surat</option>
                 <option value="menunggu">Menunggu</option>
                 <option value="disetujui">Disetujui</option>
                 <option value="ditolak">Ditolak</option>
