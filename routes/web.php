@@ -24,10 +24,8 @@ Route::post('/admin/iurankas/store', [IuranKasController::class, 'store']);
 Route::get('/admin/iurankas/edit/{id}', [IuranKasController::class, 'edit']);
 Route::put('/admin/iurankas/update/{id}', [IuranKasController::class, 'update']);
 Route::delete('/admin/iurankas/delete/{id}', [IuranKasController::class, 'destroy']);
-
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/iurankas', [IuranKasController::class, 'bayar']);
+Route::post('/iurankas/store', [IuranKasController::class, 'simpan']);
 
 //datapenduduk
 Route::get('/admin/data-penduduk', [data_pendudukController::class, 'index']);
