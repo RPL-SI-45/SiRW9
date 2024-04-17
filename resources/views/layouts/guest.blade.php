@@ -28,7 +28,7 @@
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">SiRW9</a></h1>
+      <h1 class="logo me-auto"><a href="/">SiRW9</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assetsG/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -40,8 +40,8 @@
           <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
                 <li><a href="#">Panduan Layanan</a></li>
-              <li><a href="#">Surat Online</a></li>
-              <li><a href="#">Pembayaran Kas</a></li>
+              <li><a href="/suratonline/create">Surat Online</a></li>
+              <li><a href="/iurankas">Pembayaran Kas</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Laporan</span> <i class="bi bi-chevron-down"></i></a>
