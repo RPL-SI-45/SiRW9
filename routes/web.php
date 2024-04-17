@@ -14,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [IuranKasController::class, 'index']);
-Route::get('/iurankas', [IuranKasController::class, 'create']);
-Route::post('/iurankas/store', [IuranKasController::class, 'store']);
+Route::get('/iurankas', [IuranKasController::class, 'bayar']);
+Route::post('/iurankas/store', [IuranKasController::class, 'simpan']);

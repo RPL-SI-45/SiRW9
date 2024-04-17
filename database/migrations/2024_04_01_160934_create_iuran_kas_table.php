@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('Nama_Lengkap');
             $table->string('Alamat');
-            $table->integer('RT');
+            $table->enum('RT',['1','2','3','4']);
             $table->date('Tanggal_Bayar');
             $table->string('Nomor_Rekening');
             $table->string('Nama_Pengirim');

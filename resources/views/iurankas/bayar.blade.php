@@ -24,7 +24,13 @@
             </div>
             <div class="col-md-2 mb-3">
                 <label>RT</label>
-                <input name="RT" type="text" class="form-control" id="RT" aria-describedby="Isi RT Tempat Tinggal">
+                <select class="form-select" name="RT" required>
+                    <option value="">Pilih RT</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
             </div>
             <div class="mb-3">
                 <label>Tanggal Bayar</label>
