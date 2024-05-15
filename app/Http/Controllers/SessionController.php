@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+// use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class SessionController extends Controller
 {
@@ -12,7 +15,10 @@ class SessionController extends Controller
     }
 
     //authentikasi email dan password
-    function login(Request $request){
+    function login(Request $request)
+    {
+        Session::flash('email', $request->email);
+        //validasi email dan password
         $request->validate([
             'email' => 'required|email',
             'password' => 'required'
@@ -28,9 +34,9 @@ class SessionController extends Controller
         ];
 
         if (auth()->attempt($infologin)) {
-            return 'berhasil login';
+            return redirect ('/') ->with('success','berhasil login'); //ini diredirect ke halaman mana ya?
         } else {
-            return 'gagal login';
+            return redirect('/sesi')->withErrors('pesan', 'Email atau password salah');
         }
     }
 }
