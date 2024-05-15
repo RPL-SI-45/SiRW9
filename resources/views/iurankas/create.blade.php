@@ -4,9 +4,9 @@
       <h1>Tambah Data Iuran Kas</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/admin/iurankas">Home</a></li>
-          <li class="breadcrumb-item active">Iuran Kas</li>
-          <li class="breadcrumb-item active">Tambah Iuran Kas</li>
+            <li class="breadcrumb-item"><a href="/admin/iurankas">Home</a></li>
+            <li class="breadcrumb-item active">Iuran Kas</li>
+            <li class="breadcrumb-item active">Tambah Iuran Kas</li>
         </ol>
       </nav>
     </div>

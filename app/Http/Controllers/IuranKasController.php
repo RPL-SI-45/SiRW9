@@ -90,10 +90,11 @@ class IuranKasController extends Controller
     }
 
     public function destroy($id) {
-        $invent = Iurankas::find($id);
-        $invent->delete();
+        $iurankas = Iurankas::find($id);
+        $iurankas->delete();
         return redirect('/admin/iurankas');
     }
+
     public function bayar()
     {
         return view('iurankas.bayar');

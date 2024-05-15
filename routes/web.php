@@ -3,7 +3,9 @@
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\SuratController;
+use App\Http\Controllers\UsulanController;
 use App\Models\data_penduduk;
+use App\Models\Usulanwarga;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,3 +50,11 @@ Route::post('/admin/suratonline/store', [SuratController::class, 'store']);
 Route::get('/admin/suratonline/{id}/edit', [SuratController::class, 'edit']);
 Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
 Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
+
+//usulanwarga
+Route::get('/admin/usulanwarga', [UsulanController::class, 'index']);
+Route::get('/admin/usulanwarga/create', [UsulanController::class, 'create']);
+Route::post('/admin/usulanwarga/store', [UsulanController::class, 'store']);
+Route::get('/admin/usulanwarga/edit/{id}', [UsulanController::class, 'edit']);
+Route::put('/admin/usulanwarga/update/{id}', [UsulanController::class, 'update']);
+Route::delete('/admin/usulanwarga/delete/{id}', [UsulanController::class, 'destroy']);
