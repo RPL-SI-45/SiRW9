@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeritaKegiatanController;
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\SuratController;
@@ -48,3 +49,9 @@ Route::post('/admin/suratonline/store', [SuratController::class, 'store']);
 Route::get('/admin/suratonline/{id}/edit', [SuratController::class, 'edit']);
 Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
 Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
+
+//berita kegiatan
+Route::get('/admin/beritakegiatan', [BeritaKegiatanController::class, 'adminindex']);
+Route::get('/admin/beritakegiatan/create', [BeritaKegiatanController::class, 'create']);
+Route::post('/admin/beritakegiatan/store', [BeritaKegiatanController::class, 'store']);
+Route::get('/admin/beritakegiatan/checkSlug', [BeritaKegiatanController::class, 'checkSlug']);

@@ -136,11 +136,12 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed " href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
-          <span>Berita Kegiatan</span>
-        </a>
+          <a class="nav-link collapsed {{ Request::is('admin/beritakegiatan') ? 'active' : '' }}" href="/admin/beritakegiatan">
+              <i class="bi bi-file-earmark"></i>
+              <span>Berita Kegiatan</span>
+          </a>
       </li>
+
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">
