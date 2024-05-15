@@ -27,7 +27,8 @@
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
-
+  <script src="https://unpkg.com/feather-icons"></script>
+  
 </head>
 
 <body>
@@ -173,6 +174,11 @@
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assets/js/main.js')}}"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      feather.replace();
+    });
+  </script>
 
 </body>
 

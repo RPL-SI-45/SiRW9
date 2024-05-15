@@ -55,3 +55,7 @@ Route::get('/admin/beritakegiatan', [BeritaKegiatanController::class, 'admininde
 Route::get('/admin/beritakegiatan/create', [BeritaKegiatanController::class, 'create']);
 Route::post('/admin/beritakegiatan/store', [BeritaKegiatanController::class, 'store']);
 Route::get('/admin/beritakegiatan/checkSlug', [BeritaKegiatanController::class, 'checkSlug']);
+Route::get('/admin/beritakegiatan/{beritakegiatan}', [BeritaKegiatanController::class, 'adminshow']);
+Route::get('/admin/beritakegiatan/{beritakegiatan}/edit', [BeritaKegiatanController::class, 'edit']);
+Route::put('/admin/beritakegiatan/{beritakegiatan}', [BeritaKegiatanController::class, 'update']);
+Route::delete('/admin/beritakegiatan/{beritakegiatan}', [BeritaKegiatanController::class, 'destroy']);

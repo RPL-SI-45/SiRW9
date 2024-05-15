@@ -17,6 +17,7 @@
               <br>
               <a href="/admin/data-penduduk/create" class="btn btn-primary" >Tambah Data Penduduk</a>
               <br>
+              <div class="table-responsive col-lg-12">
                     <table  class="table datatable">
                         <thead>
                             <tr >
@@ -54,6 +55,7 @@
                             </tr>
                         @endforeach
                     </table>
+                </div>
             </div>
           </div>
 
