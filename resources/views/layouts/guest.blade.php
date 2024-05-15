@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Favicons -->
-    <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/logo.png') }}" rel="apple-touch-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Favicons -->
+  <link href="{{ asset('assets/img/logo.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/logo.png') }}" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
+  <!-- Vendor CSS Files -->
   <link href="{{ asset('assetsG/vendor/aos/aos.css') }}" rel="stylesheet">
   <link href="{{ asset('assetsG/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assetsG/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
@@ -23,6 +24,7 @@
   <!-- Template Main CSS File -->
   <link href="{{ asset('assetsG/css/style.css') }}" rel="stylesheet">
 </head>
+
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top header-inner-pages">
@@ -39,7 +41,7 @@
           <li><a class="nav-link scrollto" href="#services">Berita Kegiatan</a></li>
           <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                <li><a href="#">Panduan Layanan</a></li>
+              <li><a href="#">Panduan Layanan</a></li>
               <li><a href="/suratonline/create">Surat Online</a></li>
               <li><a href="/iurankas">Pembayaran Kas</a></li>
             </ul>
@@ -47,7 +49,7 @@
           <li class="dropdown"><a href="#"><span>Laporan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Usulan</a></li>
-              <li><a href="#">Aduan</a></li>
+              <li><a href="/aduanwarga/create">Aduan</a></li>
             </ul>
           </li>
           <li><a class="getstarted scrollto" href="#about">Login Admin</a></li>
@@ -62,7 +64,7 @@
     <section class="inner-page">
       <div class="container">
         <p>
-            @yield('content')
+          @yield('content')
         </p>
       </div>
     </section>
@@ -149,4 +151,5 @@
   <script src="{{ asset('assetsG/js/main.js') }}"></script>
 
 </body>
+
 </html>

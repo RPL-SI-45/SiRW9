@@ -10,7 +10,5 @@ class Aduanwarga extends Model
     use HasFactory;
     protected $table = 'pengaduan_warga';
 
-    protected $guarded = ['id'];
-
-    public $timestamps = false;
+    protected $guarded = [];
 }

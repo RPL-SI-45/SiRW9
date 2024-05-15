@@ -3,6 +3,7 @@
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\SuratController;
+use App\Http\Controllers\AduanController;
 use App\Models\data_penduduk;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -50,4 +52,5 @@ Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
 Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
 
 //aduanwarga
-Route::get('/aduanwarga/create', [SuratController::class, 'create']);
+Route::get('/aduanwarga/create', [AduanController::class, 'create']);
+Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
