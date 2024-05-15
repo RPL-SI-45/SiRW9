@@ -48,3 +48,13 @@ Route::post('/admin/suratonline/store', [SuratController::class, 'store']);
 Route::get('/admin/suratonline/{id}/edit', [SuratController::class, 'edit']);
 Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
 Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
+
+//pengaduanwarga(adm)
+Route::get('/admin/pengaduanwarga', [SuratController::class, 'index']);
+Route::get('/pengaduanwarga/create', [SuratController::class, 'create']);
+Route::post('/pengaduanwarga/store', [SuratController::class, 'gstore']);
+Route::get('/admin/pengaduanwarga/create', [SuratController::class, 'admincreate']);
+Route::post('/admin/pengaduanwarga/store', [SuratController::class, 'store']);
+Route::get('/admin/pengaduanwarga/{id}/edit', [SuratController::class, 'edit']);
+Route::put('/admin/pengaduanwarga/{id}', [SuratController::class, 'update']);
+Route::delete('/admin/pengaduanwarga/{id}', [SuratController::class, 'destroy']);
