@@ -3,6 +3,7 @@
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\SuratController;
+use App\Http\Controllers\SessionController;
 use App\Models\data_penduduk;
 use Illuminate\Support\Facades\Route;
 
@@ -48,3 +49,7 @@ Route::post('/admin/suratonline/store', [SuratController::class, 'store']);
 Route::get('/admin/suratonline/{id}/edit', [SuratController::class, 'edit']);
 Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
 Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
+
+//login
+Route::get("/sesi", [SessionController::class, 'index']);
+Route::post("/sesi/login", [SessionController::class, 'login']);
