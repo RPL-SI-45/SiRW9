@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('slug');
             $table->text('deskripsi');
             $table->text('isi');
+            $table->string('image');
             $table->timestamp('tanggal');
             $table->timestamps();
         });

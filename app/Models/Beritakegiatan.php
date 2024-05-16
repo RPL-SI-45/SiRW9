@@ -16,6 +16,7 @@ class Beritakegiatan extends Model
         'slug',
         'deskripsi',
         'isi',
+        'image',
     ];
 
     public function sluggable(): array

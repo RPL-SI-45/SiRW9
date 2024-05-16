@@ -24,7 +24,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Buat berita kegiatan</h5>
-            <form id="BKform" action="/admin/beritakegiatan/store" method="POST" novalidate>
+            <form id="BKform" action="/admin/beritakegiatan/store" method="POST" novalidate enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="judul" class="form-label">Judul</label>
@@ -39,6 +39,10 @@
                         </div>
                         <input name="slug" type="text" class="form-control" id="slug" aria-describedby="slug-prepend" disabled readonly>
                     </div>
+                </div>
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Masukkan Foto</label>
+                    <input class="form-control" type="file" id="image" name="image">
                 </div>
                 <div class="mb-3">
                     <label for="isi" class="form-label">Konten</label>

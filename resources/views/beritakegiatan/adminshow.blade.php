@@ -16,6 +16,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{ $beritakegiatan->judul }}</h5>
+          <img src="{{ asset($beritakegiatan->image) }}" alt="{{ $beritakegiatan->judul }}" style="max-width: 300px;">
           <p class="card-text">{!! $beritakegiatan->isi !!}</p>
           <p class="card-text"><small class="text-muted">{{ $beritakegiatan->tanggal }}</small></p>
           <a href="/admin/beritakegiatan/{{ $beritakegiatan->id }}/edit" class="btn btn-warning">Edit</a>
