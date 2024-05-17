@@ -98,5 +98,17 @@ class BeritaKegiatanController extends Controller
         $beritakegiatan->delete();
         return redirect('/admin/beritakegiatan')->with('delete', 'Berhasil menghapus berita kegiatan!');
     }
+
+    public function usershow($slug) {
+        $beritakegiatan = Beritakegiatan::where('slug', $slug)->firstOrFail();
+        return view('beritakegiatan.usershow', compact('beritakegiatan'));
+    }
+    
+    
+    public function userview() {
+        $beritakegiatan = Beritakegiatan::all(); // Use plural variable name for clarity
+        return view('beritakegiatan.userview', compact('beritakegiatan'));
+    }
+    
 }
 

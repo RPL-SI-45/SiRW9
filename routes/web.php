@@ -59,3 +59,5 @@ Route::get('/admin/beritakegiatan/{beritakegiatan}', [BeritaKegiatanController::
 Route::get('/admin/beritakegiatan/{beritakegiatan}/edit', [BeritaKegiatanController::class, 'edit']);
 Route::put('/admin/beritakegiatan/{beritakegiatan}', [BeritaKegiatanController::class, 'update']);
 Route::delete('/admin/beritakegiatan/{beritakegiatan}', [BeritaKegiatanController::class, 'destroy']);
+Route::get('/beritakegiatan/{slug}', [BeritaKegiatanController::class, 'usershow'])->name('blog-details');
+Route::get('/beritakegiatan', [BeritaKegiatanController::class, 'userview']);
