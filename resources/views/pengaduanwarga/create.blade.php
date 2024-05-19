@@ -4,7 +4,7 @@
       <h1>Tambah Aduan Warga</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/admin/pengaduanwarga">Home</a></li>
+          <li class="breadcrumb-item"><a href="/pengaduanwarga/create">Home</a></li>
           <li class="breadcrumb-item active">Aduan Warga</li>
           <li class="breadcrumb-item active">Tambah Aduan Warga</li>
         </ol>
@@ -13,7 +13,7 @@
     <div class="card">
         <div class="card-body">
               <h5 class="card-title">Masukkan Aduan warga</h5>
-                <form id='usulanWargaForm' class="row g-3" action="/admin/pengaduanwarga/store" method="POST">
+                <form id='pengaduanwargaForm' class="row g-3" action="/pengaduanwarga/create" method="POST">
                     @csrf
                     <div class="mb-3">
                         <label>Aduan</label>

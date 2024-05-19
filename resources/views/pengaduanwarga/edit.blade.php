@@ -4,7 +4,7 @@
       <h1>Edit Data Pengaduan Warga</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/admin/usulanwarga">Home</a></li>
+          <li class="breadcrumb-item"><a href="/admin/pengaduanwarga">Home</a></li>
           <li class="breadcrumb-item active">Pengaduan Warga</li>
           <li class="breadcrumb-item active">Edit Aduan Warga</li>
         </ol>
@@ -18,35 +18,35 @@
                     @method('PUT')
                     <div class="mb-3">
                         <label>Aduan</label>
-                        <input name="Aduan" type="text" class="form-control" id="Aduan" value="{{$pegaduanwarga->Judul_Usulan}}">
+                        <input name="Aduan" type="text" class="form-control" id="Aduan" value="{{$pegaduanwarga->Aduan}}">
                     </div>
                     <div class="col-md-8 mb-3">
                         <label>Nama Pengusul</label>
-                        <input name="Nama_Pengusul" type="text" class="form-control" id="Nama_Pengusul" value="{{$usulanwarga->Nama_Pengusul}}">
+                        <input name="Nama_Pengadu" type="text" class="form-control" id="Nama_Pengadu" value="{{$pengaduan->Aduan}}">
                     </div>
                     <div class="col-md-4 mb-3">
                         <label>RT</label>
                         <select class="form-select" name="RT"  required>
                         <option value="">Pilih RT</option>
-                            <option value="1" @if($usulanwarga->RT=='1') selected @endif>1</option>
-                            <option value="2" @if($usulanwarga->RT=='2') selected @endif>2</option>
-                            <option value="3" @if($usulanwarga->RT=='3') selected @endif>3</option>
-                            <option value="4" @if($usulanwarga->RT=='4') selected @endif>4</option>
+                            <option value="1" @if($pengaduanwarga->RT=='1') selected @endif>1</option>
+                            <option value="2" @if($pengaduanwarga->RT=='2') selected @endif>2</option>
+                            <option value="3" @if($pengaduanwarga->RT=='3') selected @endif>3</option>
+                            <option value="4" @if($pengaduanwarga->RT=='4') selected @endif>4</option>
                         </select>
                     </div>
                     <div class="col-12">
                         <div class="form-floating">
-                        <textarea class="form-control" name="Detail_Usulan" placeholder="Detail_Usulan" id="Detail_Usulan" style="height: 100px;">{{$usulanwarga->Detail_Usulan}}</textarea>
-                        <label>Detail Usulan</label>
+                        <textarea class="form-control" name="Detail_Aduan" placeholder="Detail_Aduan" id="Detail_Aduan" style="height: 100px;">{{$pengaduanwargawarga->Detail_Aduan}}</textarea>
+                        <label>Detail Aduan</label>
                     </div>
                     </div>
                     <div class="text-center">
-                        <input type="submit" name="submit" class="btn btn-primary" value='Edit Usulan'> 
+                        <input type="submit" name="submit" class="btn btn-primary" value='Edit Aduan'> 
                     </div>
                 </form>
             </div>
             <script>
-                document.getElementById("usulanWargaform").addEventListener("submit", function(event) {
+                document.getElementById("aduanwargaform").addEventListener("submit", function(event) {
                     var form = event.target;
                     if (!form.checkValidity()) {
                         event.preventDefault();

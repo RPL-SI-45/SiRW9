@@ -4,7 +4,7 @@
       <h1>Tabel Pengaduan Warga</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/admin/usulanwarga">Home</a></li>
+          <li class="breadcrumb-item"><a href="admin/pengaduanwarga/edit">Home</a></li>
           <li class="breadcrumb-item active">Pengaduan Warga</li>
         </ol>
       </nav>
@@ -15,7 +15,7 @@
           <div class="card">
             <div class="card-body">
               <br>
-              <a href="/admin/pengaduanwarga/create" class="btn btn-primary" >Tambah Pengaduan Warga</a>
+              <a href="/admin/pengaduanwarga/edit" class="btn btn-primary" >Tambah Pengaduan Warga</a>
               <br>
                     <table  class="table datatable">
                         <thead>
@@ -28,7 +28,7 @@
                                 <th>Bukti Aduan</th>
                             </tr>
                         </thead>
-                        @foreach($pengaduanwarga as $pw)
+                        @foreach($pengaduan_warga as $pw)
                             <tr>
                                 <td>{{$pw->id}}</td>
                                 <td>{{$pw->Aduan}}</td>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
+use App\Http\Controllers\pengaduanController;
 use App\Http\Controllers\SuratController;
 use App\Models\data_penduduk;
 use Illuminate\Support\Facades\Route;
@@ -50,11 +51,6 @@ Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
 Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
 
 //pengaduanwarga(adm)
-Route::get('/admin/pengaduanwarga', [SuratController::class, 'index']);
-Route::get('/pengaduanwarga/create', [SuratController::class, 'create']);
-Route::post('/pengaduanwarga/store', [SuratController::class, 'gstore']);
-Route::get('/admin/pengaduanwarga/create', [SuratController::class, 'admincreate']);
-Route::post('/admin/pengaduanwarga/store', [SuratController::class, 'store']);
-Route::get('/admin/pengaduanwarga/{id}/edit', [SuratController::class, 'edit']);
-Route::put('/admin/pengaduanwarga/{id}', [SuratController::class, 'update']);
-Route::delete('/admin/pengaduanwarga/{id}', [SuratController::class, 'destroy']);
+Route::get('/admin/pengaduanwarga', [pengaduanController::class, 'index']);
+Route::get('/admin/pengaduanwarga/create', [pengaduanController::class, 'create']);
+Route::get('/admin/pengaduanwarga/edit/{id}', [pengaduanController::class, 'edit']);
