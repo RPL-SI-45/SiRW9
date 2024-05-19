@@ -54,23 +54,17 @@ class pengaduanController extends Controller
         }
 
         $pengaduan_warga->update([
-            'nama_lengkap' => $request->nama_lengkap,
-            'nik' => $request->nik,
-            'keperluan' => $request->keperluan,
-            'jenis_surat' => $request->jenis_surat,
-            'tanggal_lahir' => $request->tanggal_lahir,
-            'umur' => $request->umur,
-            'status' => $request->status,
-            'agama' => $request->agama,
-            'jenis_kelamin' => $request->jenis_kelamin,
-            'pekerjaan' => $request->pekerjaan,
-            'status_surat' => $request->status_surat
+            'Aduan' =>$request->Aduan,
+            'Nama_Pengadu' =>$request->Nama_Pengadu,
+            'RT_Pengadu' =>$request->RT_Pengadu,
+            'StatusAduan' =>$request->StatusAduan,
+            'Bukti_Aduan' =>$request->Bukti_Aduan,
         ]);
         return redirect('/admin/pengaduanwarga');
     }
     public function destroy($id){
-        $surat_online = pengaduan::find($id);
-        $surat_online->delete();
+        $pengaduan_warga = pengaduan::find($id);
+        $pengaduan_warga->delete();
         return redirect('/admin/pengaduanwarga');
     }
 }

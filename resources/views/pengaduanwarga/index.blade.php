@@ -15,7 +15,7 @@
           <div class="card">
             <div class="card-body">
               <br>
-              <a href="/admin/pengaduanwarga/edit" class="btn btn-primary" >Tambah Pengaduan Warga</a>
+              <a href="/admin/pengaduanwarga/create" class="btn btn-primary" >Tambah Pengaduan Warga</a>
               <br>
                     <table  class="table datatable">
                         <thead>

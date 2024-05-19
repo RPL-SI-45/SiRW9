@@ -5,6 +5,7 @@ use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\pengaduanController;
 use App\Http\Controllers\SuratController;
 use App\Models\data_penduduk;
+use App\Models\pengaduan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,3 +55,5 @@ Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
 Route::get('/admin/pengaduanwarga', [pengaduanController::class, 'index']);
 Route::get('/admin/pengaduanwarga/create', [pengaduanController::class, 'create']);
 Route::get('/admin/pengaduanwarga/edit/{id}', [pengaduanController::class, 'edit']);
+Route::put('/admin/pengaduanwarga/{id}', [pengaduanController::class, 'update']);
+Route::delete('/admin/pengaduanwarga/delete/{id}', [pengaduanController::class, 'destroy']);
