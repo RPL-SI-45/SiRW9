@@ -17,6 +17,7 @@
               <br>
               <a href="/admin/iurankas/create" class="btn btn-primary">Tambah Data Iuran Kas</a>
               <br>
+              <div class="table-responsive col-lg-12">
                     <table  class="table datatable">
                         <thead>
                             <tr >
@@ -56,6 +57,7 @@
                             </tr>
                         @endforeach
                     </table>
+              </div>
             </div>
           </div>
 

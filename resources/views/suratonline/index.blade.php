@@ -17,6 +17,7 @@
               <br>
               <a href="/admin/suratonline/create" class="btn btn-primary">Data Surat Online</a>
               <br>
+              <div class="table-responsive col-lg-12">
                     <table  class="table datatable">
                         <thead>
                             
@@ -63,6 +64,7 @@
                             </tr>
                         @endforeach
                     </table>
+              </div>
             </div>
           </div>
         </div>
