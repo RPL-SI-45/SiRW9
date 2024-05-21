@@ -13,7 +13,7 @@
     <div class="card">
         <div class="card-body">
               <h5 class="card-title">Edit Aduan Warga</h5>
-                <form id='pengaduanWargaForm' class="row g-3" action="/admin/pegaduanwarga/edit/{{$pengaduan_warga->id}}" method="GET">
+                <form id='pengaduanWargaForm' class="row g-3" action="/admin/pegaduanwarga/edit/{{$pengaduan_warga->id}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
