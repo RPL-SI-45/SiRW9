@@ -4,6 +4,7 @@ use App\Http\Controllers\BeritaKegiatanController;
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\SuratController;
+use App\Http\Controllers\AduanController;
 use App\Models\data_penduduk;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -61,3 +63,7 @@ Route::put('/admin/beritakegiatan/{beritakegiatan}', [BeritaKegiatanController::
 Route::delete('/admin/beritakegiatan/{beritakegiatan}', [BeritaKegiatanController::class, 'destroy']);
 Route::get('/beritakegiatan/{slug}', [BeritaKegiatanController::class, 'usershow'])->name('blog-details');
 Route::get('/beritakegiatan', [BeritaKegiatanController::class, 'userview']);
+
+//aduanwarga
+Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
+Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
