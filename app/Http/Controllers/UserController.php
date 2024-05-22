@@ -12,13 +12,13 @@ class UserController extends Controller
     public function profile()
     {
         $user = Auth::user();
-        return view('admin.profile', compact('user'));
+        return view('user.profile', compact('user'));
     }
 
     public function accountSettings()
     {
         $user = Auth::user();
-        return view('admin.account-settings', compact('user'));
+        return view('user.settings', compact('user'));
     }
 
     public function changePassword(Request $request)
@@ -45,6 +45,6 @@ class UserController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect('/login');
+        return redirect('/');
     }
 }
