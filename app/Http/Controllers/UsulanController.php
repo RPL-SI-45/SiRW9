@@ -55,6 +55,7 @@ class UsulanController extends Controller
             'RT' => $request->input('RT'),
             'Detail_Usulan' => $request->input('Detail_Usulan'),
         ]);
-        return redirect('/');
+
+        return view('usulanwarga.save');
     }
 }
