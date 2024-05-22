@@ -13,15 +13,15 @@ class AduanController extends Controller
         $aduan = Aduanwarga::all();
         return view('aduan.index', compact(['aduan']));
     }
-    public function create()
+    public function gcreate()
     {
         $aduan = Aduanwarga::all();
-        return view('aduan.create', compact(['aduan']));
+        return view('aduan.gcreate', compact(['aduan']));
     }
     public function gstore(Request $request)
     {
         $request->validate([
-            'bukti_aduan' => 'mimes:png,jpg,jpeg,webp'
+            'bukti_aduan' => 'mimes:pdf,png,jpg,jpeg,webp'
         ]);
         if ($request->has('bukti_aduan')) {
 
@@ -34,6 +34,7 @@ class AduanController extends Controller
             $file->move($path, $filename);
 
             Aduanwarga::create([
+                'juduladuan'=>$request->juduladuan,
                 'aduan' => $request->aduan,
                 'nama_pengadu' => $request->nama_pengadu,
                 'rt_pengadu' => $request->rt_pengadu,

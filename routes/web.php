@@ -52,5 +52,5 @@ Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
 Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
 
 //aduanwarga
-Route::get('/aduanwarga/create', [AduanController::class, 'create']);
+Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
 Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);

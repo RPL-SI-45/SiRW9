@@ -13,11 +13,12 @@ return new class extends Migration
     {
         Schema::create('pengaduan_warga', function (Blueprint $table) {
             $table->id();
-            $table->string("aduan");
+            $table->string("juduladuan");
             $table->string("nama_pengadu", 100);
             $table->string("rt_pengadu");
-            $table->enum("status_aduan", ["menunggu", "disetujui", "ditolak"]);
             $table->string("bukti_aduan", 300);
+            $table->text("aduan");
+            $table->enum("status_aduan", ["menunggu", "disetujui", "ditolak"]);
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengaduan_wargha');
+        Schema::dropIfExists('pengaduan_warga');
     }
 };
