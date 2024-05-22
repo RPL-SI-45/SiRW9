@@ -48,7 +48,7 @@
           </li>
           <li class="dropdown"><a href="#"><span>Laporan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Usulan</a></li>
+              <li><a href="/usulanwarga">Usulan</a></li>
               <li><a href="/aduanwarga/create">Aduan</a></li>
             </ul>
           </li>

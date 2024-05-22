@@ -117,7 +117,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
+            <a href="/admin/usulanwarga">
               <i class="bi bi-circle"></i><span>Usulan Warga</span>
             </a>
           </li>
