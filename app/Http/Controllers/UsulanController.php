@@ -43,4 +43,18 @@ class UsulanController extends Controller
         $usulanwarga->delete();
         return redirect('/admin/usulanwarga');
     }
+
+    public function usulwarga() {
+        return view ('usulanwarga.usulwarga');
+    }
+
+    public function save(Request $request){
+        UsulanWarga::create([
+            'Judul_Usulan' => $request->input('Judul_Usulan'),
+            'Nama_Pengusul' => $request->input('Nama_Pengusul'),
+            'RT' => $request->input('RT'),
+            'Detail_Usulan' => $request->input('Detail_Usulan'),
+        ]);
+        return redirect('/');
+    }
 }

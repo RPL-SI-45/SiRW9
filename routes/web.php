@@ -58,3 +58,5 @@ Route::post('/admin/usulanwarga/store', [UsulanController::class, 'store']);
 Route::get('/admin/usulanwarga/edit/{id}', [UsulanController::class, 'edit']);
 Route::put('/admin/usulanwarga/update/{id}', [UsulanController::class, 'update']);
 Route::delete('/admin/usulanwarga/delete/{id}', [UsulanController::class, 'destroy']);
+Route::get('/usulanwarga', [UsulanController::class, 'usulwarga']);
+Route::post('/usulanwarga/store', [UsulanController::class, 'save']);
