@@ -34,7 +34,7 @@ class SessionController extends Controller
         ];
 
         if (auth()->attempt($infologin)) {
-            return redirect ('/') ->with('success','berhasil login'); //ini diredirect ke halaman mana ya?
+            return redirect ('/admin/data-penduduk') ->with('success','berhasil login'); 
         } else {
             return redirect('/sesi')->withErrors('pesan', 'Email atau password salah');
         }

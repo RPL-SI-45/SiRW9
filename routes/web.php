@@ -6,6 +6,7 @@ use App\Http\Controllers\SuratController;
 use App\Http\Controllers\SessionController;
 use App\Models\data_penduduk;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +54,9 @@ Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
 //login
 Route::get("/sesi", [SessionController::class, 'index']);
 Route::post("/sesi/login", [SessionController::class, 'login']);
+
+//user profile
+Route::get('/admin/profile', [UserController::class, 'profile'])->name('profile');
+Route::get('/admin/account-settings', [UserController::class, 'accountSettings'])->name('account.settings');
+Route::post('/admin/account-settings/change-password', [UserController::class, 'changePassword'])->name('change.password');
+Route::post('/logout', [UserController::class, 'logout'])->name('logout');
