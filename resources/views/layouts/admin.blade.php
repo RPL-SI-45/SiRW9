@@ -127,7 +127,7 @@
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
+            <a href="/admin/pengaduanwarga">
               <i class="bi bi-circle"></i><span>Aduan Warga</span>
             </a>
           </li>
