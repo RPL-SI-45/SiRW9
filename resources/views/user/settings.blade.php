@@ -17,14 +17,16 @@
                     <div class="card-body">
                         <h5 class="card-title">Change Password</h5>
                         @if(session('success'))
-                            <div class="alert alert-success" id="flash-message">
-                                {{ session('success') }}
-                            </div>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
                         @endif
 
                         @if($errors->any())
-                            <div class="alert alert-danger" id="flash-message">
+                            <div class="alert alert-danger alert-dismissible fade show" id="flash-message">
                                 {{ $errors->first() }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         @endif
 
@@ -32,15 +34,30 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="current_password" class="form-label">Current Password</label>
-                                <input type="password" class="form-control" id="current_password" name="current_password" required>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="current_password" name="current_password" required>
+                                    <button class="btn btn-outline-secondary" type="button" id="toggleCurrentPassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="new_password" class="form-label">New Password</label>
-                                <input type="password" class="form-control" id="new_password" name="new_password" required>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="new_password" name="new_password" required>
+                                    <button class="btn btn-outline-secondary" type="button" id="toggleNewPassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label for="new_password_confirmation" class="form-label">Confirm New Password</label>
-                                <input type="password" class="form-control" id="new_password_confirmation" name="new_password_confirmation" required>
+                                <div class="input-group">
+                                    <input type="password" class="form-control" id="new_password_confirmation" name="new_password_confirmation" required>
+                                    <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Change Password</button>
                         </form>
@@ -49,4 +66,33 @@
             </div>
         </div>
     </section>
+
+    <script>
+        const toggleCurrentPassword = document.getElementById('toggleCurrentPassword');
+        const toggleNewPassword = document.getElementById('toggleNewPassword');
+        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+        const currentPasswordInput = document.getElementById('current_password');
+        const newPasswordInput = document.getElementById('new_password');
+        const confirmPasswordInput = document.getElementById('new_password_confirmation');
+
+        toggleCurrentPassword.addEventListener('click', function () {
+            togglePasswordVisibility(currentPasswordInput);
+        });
+
+        toggleNewPassword.addEventListener('click', function () {
+            togglePasswordVisibility(newPasswordInput);
+        });
+
+        toggleConfirmPassword.addEventListener('click', function () {
+            togglePasswordVisibility(confirmPasswordInput);
+        });
+
+        function togglePasswordVisibility(inputField) {
+            if (inputField.type === 'password') {
+                inputField.type = 'text';
+            } else {
+                inputField.type = 'password';
+            }
+        }
+    </script>
 @endsection

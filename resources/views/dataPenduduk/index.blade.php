@@ -7,12 +7,6 @@
     </div>
 @endif
 
-@if($errors->any())
-    <div class="alert alert-danger">
-        {{ $errors->first('pesan') }}
-    </div>
-@endif
-
     <div class="pagetitle" style="text-align: center;">
       <h1>Tabel Data Penduduk</h1>
       <nav>

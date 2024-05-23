@@ -22,8 +22,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 //login
-Route::get("/sesi", [SessionController::class, 'index'])->name('login');
-Route::post("/sesi/login", [SessionController::class, 'login']);
+Route::get("/login", [SessionController::class, 'index'])->name('login');
+Route::post("/login/masuk", [SessionController::class, 'login']);
 
 //middleware
 Route::middleware(['auth'])->group(function () {
