@@ -13,12 +13,13 @@ return new class extends Migration
     {
         Schema::create('pengaduan_warga', function (Blueprint $table) {
             $table->id();
+            $table->string("juduladuan");
+            $table->string("nama_pengadu", 100);
+            $table->string("rt_pengadu");
+            $table->string("bukti_aduan", 300);
+            $table->text("aduan");
+            $table->enum("status_aduan", ["menunggu", "disetujui", "ditolak"]);
             $table->timestamps();
-            $table->string('Aduan');
-            $table->string('Nama_Pengadu');
-            $table->enum('RT_Pengadu',['1','2','3','4']);
-            $table->enum('StatusAduan',['Belum Diverifikasi','Terverifikasi']);
-            $table->string('Bukti_Aduan');
         });
     }
 

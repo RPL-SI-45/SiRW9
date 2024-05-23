@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
-use App\Http\Controllers\pengaduanController;
+use App\Http\Controllers\AduanController;
 use App\Http\Controllers\SuratController;
 use App\Models\data_penduduk;
 use App\Models\pengaduan;
@@ -52,8 +52,9 @@ Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
 Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
 
 //pengaduanwarga(adm)
-Route::get('/admin/pengaduanwarga', [pengaduanController::class, 'index']);
-Route::get('/admin/pengaduanwarga/create', [pengaduanController::class, 'create']);
-Route::get('/admin/pengaduanwarga/edit/{id}', [pengaduanController::class, 'edit']);
-Route::put('/admin/pengaduanwarga/{id}', [pengaduanController::class, 'update']);
-Route::delete('/admin/pengaduanwarga/delete/{id}', [pengaduanController::class, 'destroy']);
+Route::get('/admin/pengaduanwarga', [AduanController::class, 'index']);
+Route::get('/admin/pengaduanwarga/create', [AduanController::class, 'create']);
+Route::post('/admin/pengaduanwarga/store', [AduanController::class, 'store']); 
+Route::get('/admin/pengaduanwarga/edit/{id}', [AduanController::class, 'edit']);
+Route::put('/admin/pengaduanwarga/{id}', [AduanController::class, 'update']);
+Route::delete('/admin/pengaduanwarga/delete/{id}', [AduanController::class, 'destroy']);
