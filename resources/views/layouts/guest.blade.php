@@ -52,7 +52,7 @@
               <li><a href="/aduanwarga/create">Aduan</a></li>
             </ul>
           </li>
-          <li><a class="getstarted scrollto" href="#about">Login Admin</a></li>
+          <li><a class="getstarted scrollto" href="/login">Login Admin</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

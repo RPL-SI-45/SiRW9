@@ -4,11 +4,16 @@ use App\Http\Controllers\BeritaKegiatanController;
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\SuratController;
+<<<<<<< HEAD
 use App\Http\Controllers\AduanController;
 use App\Http\Controllers\UsulanController;
+=======
+use App\Http\Controllers\SessionController;
+>>>>>>> S2-Rafiano
 use App\Models\data_penduduk;
 use App\Models\Usulanwarga;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,35 +29,47 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+//login
+Route::get("/login", [SessionController::class, 'index'])->name('login');
+Route::post("/login/masuk", [SessionController::class, 'login']);
 
-//iurankas
-Route::get('/admin/iurankas', [IuranKasController::class, 'index']);
-Route::get('/admin/iurankas/create', [IuranKasController::class, 'create']);
-Route::post('/admin/iurankas/store', [IuranKasController::class, 'store']);
-Route::get('/admin/iurankas/edit/{id}', [IuranKasController::class, 'edit']);
-Route::put('/admin/iurankas/update/{id}', [IuranKasController::class, 'update']);
-Route::delete('/admin/iurankas/delete/{id}', [IuranKasController::class, 'destroy']);
-Route::get('/iurankas', [IuranKasController::class, 'bayar']);
-Route::post('/iurankas/store', [IuranKasController::class, 'simpan']);
+//middleware
+Route::middleware(['auth'])->group(function () {
+    // IuranKas
+    Route::get('/admin/iurankas', [IuranKasController::class, 'index']);
+    Route::get('/admin/iurankas/create', [IuranKasController::class, 'create']);
+    Route::post('/admin/iurankas/store', [IuranKasController::class, 'store']);
+    Route::get('/admin/iurankas/edit/{id}', [IuranKasController::class, 'edit']);
+    Route::put('/admin/iurankas/update/{id}', [IuranKasController::class, 'update']);
+    Route::delete('/admin/iurankas/delete/{id}', [IuranKasController::class, 'destroy']);
+    Route::get('/iurankas', [IuranKasController::class, 'bayar']);
+    Route::post('/iurankas/store', [IuranKasController::class, 'simpan']);
 
-//datapenduduk
-Route::get('/admin/data-penduduk', [data_pendudukController::class, 'index']);
-Route::get('/admin/data-penduduk/create', [data_pendudukController::class, 'create']);
-Route::post('/admin/data-penduduk/store', [data_pendudukController::class, 'store']);
-Route::get('/admin/data-penduduk/{id}/edit', [data_pendudukController::class, 'edit']);
-Route::put('/admin/data-penduduk/{id}', [data_pendudukController::class, 'update']);
-Route::delete('/admin/data-penduduk/{id}', [data_pendudukController::class, 'destroy']);
+    // DataPenduduk
+    Route::get('/admin/data-penduduk', [data_pendudukController::class, 'index']);
+    Route::get('/admin/data-penduduk/create', [data_pendudukController::class, 'create']);
+    Route::post('/admin/data-penduduk/store', [data_pendudukController::class, 'store']);
+    Route::get('/admin/data-penduduk/{id}/edit', [data_pendudukController::class, 'edit']);
+    Route::put('/admin/data-penduduk/{id}', [data_pendudukController::class, 'update']);
+    Route::delete('/admin/data-penduduk/{id}', [data_pendudukController::class, 'destroy']);
 
-//suratonline
+    // SuratOnline
+    Route::get('/admin/suratonline', [SuratController::class, 'index']);
+    Route::get('/suratonline/create', [SuratController::class, 'create']);
+    Route::post('/suratonline/store', [SuratController::class, 'gstore']);
+    Route::get('/admin/suratonline/create', [SuratController::class, 'admincreate']);
+    Route::post('/admin/suratonline/store', [SuratController::class, 'store']);
+    Route::get('/admin/suratonline/{id}/edit', [SuratController::class, 'edit']);
+    Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);    Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
 
-Route::get('/admin/suratonline', [SuratController::class, 'index']);
-Route::get('/suratonline/create', [SuratController::class, 'create']);
-Route::post('/suratonline/store', [SuratController::class, 'gstore']);
-Route::get('/admin/suratonline/create', [SuratController::class, 'admincreate']);
-Route::post('/admin/suratonline/store', [SuratController::class, 'store']);
-Route::get('/admin/suratonline/{id}/edit', [SuratController::class, 'edit']);
-Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
-Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
+
+    // User Profile
+    Route::get('/admin/profile', [UserController::class, 'profile'])->name('profile');
+    Route::get('/admin/account-settings', [UserController::class, 'accountSettings'])->name('account.settings');
+    Route::post('/admin/account-settings/change-password', [UserController::class, 'changePassword'])->name('change.password');
+    Route::post('/logout', [UserController::class, 'logout'])->name('logout');
+});
+
 
 //usulanwarga
 Route::get('/admin/usulanwarga', [UsulanController::class, 'index']);
