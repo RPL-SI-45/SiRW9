@@ -44,11 +44,13 @@
                                             <td><a href="{{ asset($pw->bukti_aduan) }}" target="_blank">Lihat</a></td>
                                             <td>{{ $pw->status_aduan }}</td>
                                             <td style="display: flex; gap: 5px; justify-content: center">
-                                                <a href="/admin/pengaduanwarga/edit/{{ $pw->id }}" class="btn btn-warning btn-sm">Edit✏️</a>
-                                                <form action="/admin/pengaduanwarga/delete/{{ $pw->id }}" method="POST" onsubmit="return confirm('Hapus Data Pengaduan?')">
+                                                <a href="/admin/pengaduanwarga/edit/{{ $pw->id }}" class="badge bg-warning"><span data-feather="edit"></span></a>
+                                                <form action="/admin/pengaduanwarga/delete/{{ $pw->id }}" method="POST">
                                                     @csrf
                                                     @method('delete')
-                                                    <input class="btn btn-danger btn-sm" type="submit" value="Delete 🗑️">
+                                                    <button class="badge bg-danger border-0" type="submit" onclick="return confirm('Hapus Data Aduan?')">
+                                                        <span data-feather="trash-2"></span>
+                                                    </button>
                                                 </form>
                                             </td>
                                         </tr>

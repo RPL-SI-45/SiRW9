@@ -52,11 +52,13 @@
                                 <td>{{$dp->Status_Perkawinan}}</td>
                                 <td>{{$dp->Pekerjaan}}</td>
                                 <td style="display: flex; gap: 5px; justify-content:center">
-                                    <a href="/admin/data-penduduk/{{$dp->id}}/edit" class="btn btn-warning btn-sm">Edit✏️</a>
+                                    <a href="/admin/data-penduduk/{{$dp->id}}/edit"class="badge bg-warning"><span data-feather="edit"></span></a>
                                     <form action="/admin/data-penduduk/{{$dp->id}}" method="POST">
                                         @csrf
                                         @method('delete')
-                                        <input class="btn btn-danger btn-sm" type="submit" value='Delete🗑️' onclick="confirm('Hapus Data Peminjaman?')">
+                                        <button class="badge bg-danger border-0" type="submit" onclick="return confirm('Hapus Data Penduduk?')">
+                                          <span data-feather="trash-2"></span>
+                                        </button>
                                     </form>
                                 </td>
                             </tr>

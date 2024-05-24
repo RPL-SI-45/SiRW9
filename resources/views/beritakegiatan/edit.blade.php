@@ -26,7 +26,7 @@
       <div class="card">
         <div class="card-body">
         <br>
-          <form action="/admin/beritakegiatan/{{ $beritakegiatan->id }}" method="POST" enctype="multipart/form-data">
+          <form id="BKform" action="/admin/beritakegiatan/{{ $beritakegiatan->id }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="mb-3">
@@ -48,16 +48,19 @@
                     <div class="mt-2">
                         <img src="{{ asset($beritakegiatan->image) }}" alt="{{ $beritakegiatan->judul }}" style="max-width: 200px;">
                         <p>Foto yang saat ini ditampilkan: <a href="{{ asset($beritakegiatan->image) }}">{{ $beritakegiatan->image }}</a></p>
-                    </div>
+                      </div>
                 @endif
-                <input class="form-control" type="file" name="image">
+                <input class="form-control" type="file" id="image" name="image" accept="image/png, image/jpeg, image/jpg, image/webp">
+                <div class="invalid-feedback">File harus berupa gambar dengan format PNG, JPG, JPEG, atau WEBP dan ukuran maksimal 2MB.</div>
             </div>
             <div class="mb-3">
-                    <label for="isi" class="form-label">Konten</label>
-                    <input id="isi" type="hidden" name="isi" value="{{ old('isi', $beritakegiatan->isi) }}" required>
-                    <trix-editor input="isi"></trix-editor>
-                </div>
-            <button type="submit" class="btn btn-primary">Update</button>
+                <label for="isi" class="form-label">Konten</label>
+                <input id="isi" type="hidden" name="isi" value="{{ old('isi', $beritakegiatan->isi) }}" required>
+                <trix-editor input="isi"></trix-editor>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Edit Berita Kegiatan</button>
+            </div>
           </form>
         </div>
       </div>
@@ -73,22 +76,39 @@
         fetch('/admin/beritakegiatan/checkSlug?judul=' + judul.value)
             .then(response => response.json())
             .then(data => slug.value = data.slug)
-    })
-</script>
-<script>
+    });
+
     document.getElementById("BKform").addEventListener("submit", function(event) {
         var form = event.target;
+        var fileInput = document.getElementById('image');
+        var file = fileInput.files[0];
+
         if (!form.checkValidity()) {
             event.preventDefault();
             event.stopPropagation();
-            // Show notification for empty fields
             alert("Please fill out all required fields.");
         }
+
+        if (file) {
+            var validTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
+            if (!validTypes.includes(file.type)) {
+                alert("Invalid file type. Only PNG, JPG, JPEG, and WEBP are allowed.");
+                event.preventDefault();
+                return;
+            }
+
+            if (file.size > 2048 * 1024) {
+                alert("File size exceeds 2MB.");
+                event.preventDefault();
+                return;
+            }
+        }
+
         form.classList.add('was-validated');
     });
 
-    document.addEventListener('trix-file-accept', function(e){
+    document.addEventListener('trix-file-accept', function(e) {
         e.preventDefault();
-    })
+    });
 </script>
 @endsection

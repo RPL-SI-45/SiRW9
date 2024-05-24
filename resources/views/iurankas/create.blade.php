@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-md-2 mb-3">
                         <label>RT</label>
-                        <select class="form-select" name="RT"  required>
+                        <select class="form-select" name="RT" required>
                             <option value="">Pilih RT</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -48,7 +48,7 @@
                     <div class="mb-3">
                         <label for="inputNumber" class="col-sm-2 col-form-label">Bukti Pembayaran</label>
                         <div class="col-sm-12">
-                            <input class="form-control" type="file" name="Bukti_Pembayaran" required>
+                            <input class="form-control" type="file" name="Bukti_Pembayaran" accept=".png, .jpg, .jpeg, .webp" required>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -67,12 +67,23 @@
             <script>
                 document.getElementById("iuranKasform").addEventListener("submit", function(event) {
                     var form = event.target;
+                    var fileInput = form.querySelector('input[type="file"]');
+                    var file = fileInput.files[0];
+                    var validTypes = ['image/png', 'image/jpg', 'image/jpeg', 'image/webp'];
+                    
                     if (!form.checkValidity()) {
                         event.preventDefault();
                         event.stopPropagation();
-                        // Show notification for empty fields
                         alert("Please fill out all required fields.");
                     }
+                    
+                    if (file && !validTypes.includes(file.type)) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        alert("Please upload a valid image file (png, jpg, jpeg, webp).");
+                        fileInput.value = ''; // Clear the file input
+                    }
+                    
                     form.classList.add('was-validated');
                 });
             </script>

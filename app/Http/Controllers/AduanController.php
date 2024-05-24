@@ -123,7 +123,7 @@ class AduanController extends Controller
     public function gstore(Request $request)
     {
         $request->validate([
-            'bukti_aduan' => 'mimes:pdf,png,jpg,jpeg,webp'
+            'bukti_aduan' => 'mimes:png,jpg,jpeg,webp,pdf,docx'
         ]);
         if ($request->has('bukti_aduan')) {
 

@@ -36,11 +36,13 @@
                                 <td>{{$uw->RT}}</td>
                                 <td>{{$uw->Detail_Usulan}}</td>
                                 <td style="display: flex; gap: 5px; justify-content:center">
-                                    <a href="/admin/usulanwarga/edit/{{$uw->id}}" class="btn btn-warning btn-sm">Edit✏️</a>
+                                    <a href="/admin/usulanwarga/edit/{{$uw->id}}" class="badge bg-warning"><span data-feather="edit"></span></a>
                                     <form action="/admin/usulanwarga/delete/{{$uw->id}}" method="POST">
                                         @csrf
                                         @method('delete')
-                                        <input class="btn btn-danger btn-sm" type="submit" value='Delete🗑️' onclick="confirm('Hapus Data Peminjaman?')">
+                                        <button class="badge bg-danger border-0" type="submit" onclick="return confirm('Hapus Usulan Warga?')">
+                                          <span data-feather="trash-2"></span>
+                                        </button>
                                     </form>
                                 </td>
                             </tr>
