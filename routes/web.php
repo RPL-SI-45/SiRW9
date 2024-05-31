@@ -11,6 +11,7 @@ use App\Models\data_penduduk;
 use App\Models\Usulanwarga;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProfilRWController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +89,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/pengaduanwarga/edit/{id}', [AduanController::class, 'edit']);
     Route::put('/admin/pengaduanwarga/{id}', [AduanController::class, 'update']);
     Route::delete('/admin/pengaduanwarga/delete/{id}', [AduanController::class, 'destroy']);
+
+    //profil RW
+    Route::get('/admin/profilrw', [UserController::class, 'profilrw']);   
+    Route::get('/admin/profilrw/edit', [ProfilRWController::class, 'editProfilrw']);
+    Route::post('/admin/profilrw/update', [ProfilRWController::class, 'updateProfilrw']); 
 
 });
 
