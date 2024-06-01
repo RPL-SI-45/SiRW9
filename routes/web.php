@@ -4,9 +4,11 @@ use App\Http\Controllers\BeritaKegiatanController;
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\AduanController;
+use App\Http\Controllers\CarouselImageController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UsulanController;
 use App\Http\Controllers\SessionController;
+use App\Http\Controllers\HomeController;
 use App\Models\data_penduduk;
 use App\Models\Usulanwarga;
 use Illuminate\Support\Facades\Route;
@@ -23,9 +25,10 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/berita/{slug}', [BeritaKegiatanController::class, 'show'])->name('blog-details');
+Route::resource('carousel-images', CarouselImageController::class);
+
 //login
 Route::get("/login", [SessionController::class, 'index'])->name('login');
 Route::post("/login/masuk", [SessionController::class, 'login']);
