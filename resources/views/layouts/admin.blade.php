@@ -156,6 +156,13 @@
         </a>
       </li> 
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="/admin/homepage-edit">
+          <i class="bi bi-card-image"></i>
+          <span>Edit Homepage</span>
+        </a>
+      </li> 
+
 
     </ul>
 

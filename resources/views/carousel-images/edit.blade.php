@@ -1,4 +1,4 @@
-<form action="{{ route('carousel-images.update', $carouselImage->id) }}" method="POST" enctype="multipart/form-data">
+<form action="/admin/homepage-edit/edit/{id}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
     <div class="form-group">

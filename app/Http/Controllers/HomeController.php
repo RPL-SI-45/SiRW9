@@ -13,6 +13,6 @@ class HomeController extends Controller
         $beritakegiatan = Beritakegiatan::latest()->take(3)->get();
         $carouselImages = CarouselImage::all();
 
-        return view('welcome', compact('beritakegiatan','carouselImages'));
+        return view('welcome', compact('beritakegiatan', 'carouselImages'));
     }
 }

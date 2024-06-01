@@ -12,6 +12,16 @@ class CarouselImageController extends Controller
         $carouselImages = CarouselImage::all();
         return view('carousel-images.index', compact('carouselImages'));
     }
+    public function adminindex()
+    {
+        $carouselImages = CarouselImage::all();
+        return view('carousel-images.adminindex', compact('carouselImages'));
+    }
+    public function view()
+    {
+        $carouselImages = CarouselImage::all();
+        return view('carousel-images.view', compact('carouselImages'));
+    }
 
     public function edit(CarouselImage $carouselImage)
     {

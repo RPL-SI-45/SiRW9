@@ -26,8 +26,6 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/berita/{slug}', [BeritaKegiatanController::class, 'show'])->name('blog-details');
-Route::resource('carousel-images', CarouselImageController::class);
 
 //login
 Route::get("/login", [SessionController::class, 'index'])->name('login');
@@ -91,6 +89,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/pengaduanwarga/edit/{id}', [AduanController::class, 'edit']);
     Route::put('/admin/pengaduanwarga/{id}', [AduanController::class, 'update']);
     Route::delete('/admin/pengaduanwarga/delete/{id}', [AduanController::class, 'destroy']);
+
+    //homepage edit
+    Route::get('/admin/homepage-edit', [CarouselImageController::class, 'adminindex']);
+    Route::get('/admin/homepage-edit/edit/{id}', [CarouselImageController::class, 'edit']);
+    Route::put('/admin/homepage-edit/{id}', [CarouselImageController::class, 'update']);    
+    Route::get('/admin/homepage-edit/view', [CarouselImageController::class, 'view']);
+    Route::get('/admin/homepage-edit/{id}/edit', [CarouselImageController::class, 'edit']);
+    Route::put('/admin/homepage-edit/{id}', [CarouselImageController::class, 'update']);
+    
 
 });
 

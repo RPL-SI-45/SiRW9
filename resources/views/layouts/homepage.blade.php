@@ -20,6 +20,7 @@
   <link href="{{ asset('assetsG/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
   <link href="{{ asset('assetsG/vendor/remixicon/remixicon.css') }}" rel="stylesheet">
   <link href="{{ asset('assetsG/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="{{ asset('assetsG/css/style.css') }}" rel="stylesheet">
@@ -61,12 +62,11 @@
   </header><!-- End Header -->
 
   <main id="main">
+    
     <section class="inner-page">
-      <div class="container">
-        <p>
+      
           @yield('content')
-        </p>
-      </div>
+        
     </section>
   </main><!-- End #main -->
 
@@ -146,6 +146,9 @@
   <script src="{{ asset('assetsG/vendor/swiper/swiper-bundle.min.js') }}"></script>
   <script src="{{ asset('assetsG/vendor/waypoints/noframework.waypoints.js') }}"></script>
   <script src="{{ asset('assetsG/vendor/php-email-form/validate.js') }}"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="{{ asset('assetsG/js/main.js') }}"></script>
