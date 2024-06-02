@@ -91,10 +91,11 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/admin/pengaduanwarga/delete/{id}', [AduanController::class, 'destroy']);
 
     //profil RW
-    Route::get('/admin/profilrw', [UserController::class, 'profilrw']);   
-    Route::get('/admin/profilrw/edit', [ProfilRWController::class, 'editProfilrw']);
-    Route::post('/admin/profilrw/update', [ProfilRWController::class, 'updateProfilrw']); 
-
+    Route::get('/admin/profilrw', [ProfilRWController::class, 'profilrw'])->name('profilrw');   
+    Route::get('/admin/profilrw/create', [ProfilRWController::class, 'create']);
+    Route::post('/admin/profilrw', [ProfilRWController::class, 'store']);
+    Route::get('/admin/profilrw/edit/{id}', [ProfilRWController::class, 'editProfilrw']);
+    Route::put('/admin/profilrw/update/{id}', [ProfilRWController::class, 'updateProfilrw']); 
 });
 
 //suratonline

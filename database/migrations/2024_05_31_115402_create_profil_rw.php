@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('profil_rw', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->text('description')->nullable();
+            $table->string('image')->nullable();
         });
     }
 

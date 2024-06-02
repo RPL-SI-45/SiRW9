@@ -8,9 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class ProfilRW extends Model
 {
     use HasFactory;
+    protected $table = 'profil_rw';
+    protected $guarded =[];
 
     protected $fillable = [
         'description',
-        'photo',
+        'image',
     ];
 }
