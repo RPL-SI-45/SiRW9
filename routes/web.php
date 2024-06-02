@@ -4,6 +4,7 @@ use App\Http\Controllers\BeritaKegiatanController;
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\AduanController;
+use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UsulanController;
 use App\Http\Controllers\SessionController;
@@ -11,6 +12,7 @@ use App\Models\data_penduduk;
 use App\Models\Usulanwarga;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Models\PanduanLayanan;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,6 +91,13 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/admin/pengaduanwarga/{id}', [AduanController::class, 'update']);
     Route::delete('/admin/pengaduanwarga/delete/{id}', [AduanController::class, 'destroy']);
 
+    //Panduan Layanan (adm)
+    Route::get('/admin/panduanlayanan', [PanduanController::class, 'index']);
+    Route::get('/admin/panduanlayanan/create', [PanduanController::class, 'create']);
+    Route::post('/admin/panduanlayanan/store', [PanduanController::class, 'store']);
+    Route::get('/admin/panduanlayanan/edit/{id}', [PanduanController::class, 'edit']);
+    Route::put('/admin/panduanlayanan/update/{id}', [PanduanController::class, 'update']);
+    Route::delete('/admin/panduanlayanan/delete/{id}', [PanduanController::class, 'destroy']);
 });
 
 //suratonline
@@ -110,3 +119,6 @@ Route::get('/beritakegiatan', [BeritaKegiatanController::class, 'userview']);
 //aduanwarga
 Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
 Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
+
+//panduanlayanan
+Route::get('/panduanlayanan', [PanduanController::class, 'panduan']);
