@@ -31,6 +31,9 @@
         <div class="alert alert-warning" role="alert">
             Profil RW belum tersedia.
         </div>
+        <div class="text-center">
+            <a href="/admin/profilrw/create" class="btn btn-success">Create New</a>
+        </div>
     @endif
 
     <!-- <div class="text-center">
