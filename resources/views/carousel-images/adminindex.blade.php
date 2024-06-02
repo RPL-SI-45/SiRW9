@@ -42,14 +42,17 @@
     </div>
     <section class="section">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
           <div class="card">
             <br>
-                <div class="card-body">
+                <div class="card-body ">
+                  <div class="text-center">
+                    <h4>Edit Carousel</h4>
+                  </div>
                     <div class="table-responsive col-lg-12">
                         <table class="table">
                         <div class="justify-content-center">
-                            <div id="carouselExampleIndicators" class="carousel slide col-lg-6" data-ride="carousel">
+                            <div id="carouselExampleIndicators" class="carousel slide col-lg-12" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     @foreach($carouselImages as $index => $image)
                                         <li data-target="#carouselExampleIndicators" data-slide-to="{{ $index }}" class="{{ $index == 0 ? 'active' : '' }}"></li>
@@ -82,7 +85,6 @@
                         <td>{{ $image->id }}</td>
                         <td><a href="{{ asset($image->image) }}">{{ $image->image }}</a></td>
                         <td style="display: flex; gap: 5px; justify-content:center">
-                          <a href="/admin/homepage-edit/view" class="badge bg-info"><span data-feather="eye"></span></a>
                           <a href="/admin/homepage-edit/{{ $image->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
                         </td>
                       </tr>
@@ -93,6 +95,47 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-6">
+          <div class="card">
+              <br>
+              <div class="card-body">
+                  <div class="text-center">
+                    <h4>Tambah Foto</h4>
+                  </div>
+                  <a href="/admin/photo-edit/create" class="btn btn-primary">Tambahkan Foto Homepage</a>
+                  <br>
+                  <br>
+                  <div class="table-responsive col-lg-12">
+                      <table class="table">
+                          <tr>
+                              <th>ID</th>
+                              <th>Judul</th>
+                              <th>Action</th>
+                          </tr>
+                          <tbody>
+                              @foreach($photoCarouselImages as $pc)
+                              <tr>
+                                  <td>{{ $pc->id }}</td>
+                                  <td><a href="{{ asset($pc->image) }}">{{ $pc->image }}</a></td>
+                                  <td style="display: flex; gap: 5px; justify-content:center">
+                                      <a href="/admin/photo-edit/{{ $pc->id }}/edit" class="badge bg-warning"><span data-feather="edit"></span></a>
+                                      <form action="/admin/photo-edit/{{ $pc->id }}" method="POST">
+                                        @csrf
+                                        @method('delete')
+                                        <button class="badge bg-danger border-0" type="submit" onclick="return confirm('Hapus Berita Kegiatan?')">
+                                          <span data-feather="trash-2"></span>
+                                        </button>
+                                    </form>
+                                  </td>
+                                  
+                              </tr>
+                              @endforeach
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
       </div>
     </section>
 @endsection

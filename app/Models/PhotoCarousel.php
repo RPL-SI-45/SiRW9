@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CarouselImage extends Model
+class PhotoCarousel extends Model
 {
     use HasFactory;
-    protected $table = 'carousel_images';
+
+    protected $table = 'photo_carousel';
+
     protected $fillable = ['image'];
 }

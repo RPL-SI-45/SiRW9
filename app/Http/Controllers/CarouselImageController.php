@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CarouselImage;
+use Illuminate\Support\Facades\Log;
 
 class CarouselImageController extends Controller
 {
@@ -12,39 +13,46 @@ class CarouselImageController extends Controller
         $carouselImages = CarouselImage::all();
         return view('carousel-images.index', compact('carouselImages'));
     }
+
     public function adminindex()
     {
         $carouselImages = CarouselImage::all();
         return view('carousel-images.adminindex', compact('carouselImages'));
     }
-    public function view()
-    {
-        $carouselImages = CarouselImage::all();
-        return view('carousel-images.view', compact('carouselImages'));
-    }
 
-    public function edit(CarouselImage $carouselImage)
+    public function edit($id)
     {
+        $carouselImage = CarouselImage::findOrFail($id);
         return view('carousel-images.edit', compact('carouselImage'));
     }
 
-    public function update(Request $request, CarouselImage $carouselImage)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        $validatedData = $request->validate([
+            'image' => 'mimes:png,jpg,jpeg,webp|max:2048'
         ]);
 
-        if ($request->hasFile('image')) {
-            // Delete old image if needed
-            // Storage::delete($carouselImage->image);
+        $carouselImage = CarouselImage::findOrFail($id);
 
-            $imagePath = $request->file('image')->store('carousel-images');
-            $carouselImage->update([
-                'image' => $imagePath,
-            ]);
+        if ($request->hasFile('image')) {
+            // Generate a unique file name
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $path = 'uploads/carousel-images/';
+
+            // Delete the old image file if it exists
+            if ($carouselImage->image && file_exists(public_path($carouselImage->image))) {
+                unlink(public_path($carouselImage->image));
+            }
+
+            // Save the new file
+            $file->move(public_path($path), $filename);
+            $validatedData['image'] = $path . $filename;
         }
 
-        return redirect()->route('carousel-images.index')->with('success', 'Carousel Image updated successfully.');
-    }
+        $carouselImage->update($validatedData);
 
+        return redirect("/admin/homepage-edit")->with('Sukses', 'Carousel Image updated successfully.');
+    }
 }

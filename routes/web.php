@@ -9,6 +9,7 @@ use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UsulanController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PhotoCarouselController;
 use App\Models\data_penduduk;
 use App\Models\Usulanwarga;
 use Illuminate\Support\Facades\Route;
@@ -90,13 +91,20 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/admin/pengaduanwarga/{id}', [AduanController::class, 'update']);
     Route::delete('/admin/pengaduanwarga/delete/{id}', [AduanController::class, 'destroy']);
 
-    //homepage edit
-    Route::get('/admin/homepage-edit', [CarouselImageController::class, 'adminindex']);
-    Route::get('/admin/homepage-edit/edit/{id}', [CarouselImageController::class, 'edit']);
-    Route::put('/admin/homepage-edit/{id}', [CarouselImageController::class, 'update']);    
-    Route::get('/admin/homepage-edit/view', [CarouselImageController::class, 'view']);
+    // Route to display the admin homepage edit view
+    Route::get('/admin/homepage-edit', function () {
+        $carouselImages = \App\Models\CarouselImage::all();
+        $photoCarouselImages = \App\Models\PhotoCarousel::all();
+        return view('carousel-images.adminindex', compact('carouselImages', 'photoCarouselImages'));
+    })->name('carousel-images.adminindex');
     Route::get('/admin/homepage-edit/{id}/edit', [CarouselImageController::class, 'edit']);
     Route::put('/admin/homepage-edit/{id}', [CarouselImageController::class, 'update']);
+    Route::get('/admin/photo-edit/create', [PhotoCarouselController::class, 'create']);
+    Route::post('/admin/photo-edit/store', [PhotoCarouselController::class, 'store']);
+    Route::get('/admin/photo-edit/{id}/edit', [PhotoCarouselController::class, 'edit']);
+    Route::put('/admin/photo-edit/{id}', [PhotoCarouselController::class, 'update']);
+    Route::delete('/admin/photo-edit/{id}', [PhotoCarouselController::class, 'destroy']);
+
     
 
 });
