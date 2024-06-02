@@ -60,7 +60,7 @@ class ProfilRWController extends Controller
         // Validasi input
         $request->validate([
             'description' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         // Ambil data profil RW dari database
