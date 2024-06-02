@@ -1,6 +1,6 @@
 @extends('layouts.admin')
+
 @section('content')
-<!-- create.blade.php -->
 <div class="pagetitle">
     <h1>Tambahkan Profil RW</h1>
     <nav>
@@ -10,20 +10,27 @@
             <li class="breadcrumb-item active">Create</li>
         </ol>
     </nav>
-    </div>
-    <div class="container mt-5">
-        <h2>Create Profil RW</h2>
+</div>
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
         <form action="/admin/profilrw" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+
+            <div class="mb-4">
+                <label for="description" class="form-label">Deskripsi:</label>
+                <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
             </div>
-            <div class="form-group">
-                <label for="image">Image:</label>
-                <input type="file" class="form-control-file" id="image" name="image" required>
+
+            <div class="mb-4">
+                <label for="image" class="form-label">Foto:</label>
+                <input type="file" class="form-control" id="image" name="image" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
         </form>
     </div>
+</div>
 @endsection
