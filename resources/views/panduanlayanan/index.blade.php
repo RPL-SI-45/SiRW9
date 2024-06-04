@@ -32,7 +32,7 @@
                             <tr>
                                 <td>{{$pl->id}}</td>
                                 <td>{{$pl->Judul_Panduan}}</td>
-                                <td>{{!!$pl->IsiPanduan!!}}</td>
+                                <td>{!!$pl->IsiPanduan!!}</td>
                                 <td>{{$pl->KategoriPanduan}}</td>
                                 <td>{{$pl->created_at}}</td>
                                 <td>{{$pl->updated_at}}</td>
