@@ -53,6 +53,6 @@ class CarouselImageController extends Controller
 
         $carouselImage->update($validatedData);
 
-        return redirect("/admin/homepage-edit")->with('Sukses', 'Carousel Image updated successfully.');
+        return redirect("/admin/homepage-edit")->with('sukses', 'Berhasil mengupdate Carousel Image!');
     }
 }

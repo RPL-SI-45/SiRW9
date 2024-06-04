@@ -33,7 +33,7 @@ class PhotoCarouselController extends Controller
 
         PhotoCarousel::create($validatedData);
 
-        return redirect('/admin/homepage-edit')->with('sukses', 'Berhasil menambahkan berita kegiatan baru!');
+        return redirect('/admin/homepage-edit')->with('sukses', 'Berhasil menambahkan foto baru!');
     }
 
     public function edit($id)
@@ -66,7 +66,7 @@ class PhotoCarouselController extends Controller
 
         $photo->update($validatedData);
 
-        return redirect('/admin/homepage-edit')->with('sukes', 'Photo updated successfully');
+        return redirect('/admin/homepage-edit')->with('sukses', 'Berhasil mengupdate foto!');
     }
 
     // Remove the specified resource from storage.
@@ -81,6 +81,6 @@ class PhotoCarouselController extends Controller
 
         $photo->delete();
 
-        return redirect()->route('carousel-images.adminindex')->with('success', 'Photo deleted successfully');
+        return redirect()->route('carousel-images.adminindex')->with('sukses', 'Berhasil menghapus foto!');
     }
 }

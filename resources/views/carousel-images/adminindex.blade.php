@@ -98,7 +98,7 @@
         <div class="col-lg-6">
           <div class="card">
               <br>
-              <div class="card-body">
+              <div class="card-body" id='photoCard'>
                   <div class="text-center">
                     <h4>Tambah Foto</h4>
                   </div>
