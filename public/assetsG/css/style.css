@@ -391,7 +391,7 @@ h6 {
 }
 
 #hero .container {
-  padding-top: 50px;
+  padding-top: 72px;
 }
 
 #hero h1 {
@@ -651,7 +651,7 @@ section {
 # Why Us
 --------------------------------------------------------------*/
 .why-us .content {
-  padding: 60px 100px 0 100px;
+  padding: 0px 100px 0 100px;
 }
 
 .why-us .content h3 {
@@ -678,7 +678,7 @@ section {
 }
 
 .why-us .accordion-list {
-  padding: 0 100px 60px 100px;
+  padding: 0 100px 30px 100px;
 }
 
 .why-us .accordion-list ul {
@@ -965,7 +965,8 @@ section {
 }
 
 .portfolio .portfolio-item {
-  margin-bottom: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .portfolio .portfolio-item .portfolio-img {
@@ -1388,7 +1389,7 @@ section {
 }
 
 .faq .faq-list a.collapsed .icon-show {
-  display: inline-block;
+  display: auto;
 }
 
 .faq .faq-list a.collapsed .icon-close {
