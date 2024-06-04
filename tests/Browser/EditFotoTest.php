@@ -24,7 +24,7 @@ class EditFotoTest extends DuskTestCase
             ->with('#photoCard', function (Browser $card) {
                 $card->click('.badge.bg-warning');
             })
-            ->attach('#image', public_path('uploads\photocarousel\photo2.jpg'))
+            ->attach('#image', public_path('uploads\photocarousel\test.jpg'))
             ->press('Edit Foto')
             ->assertSee('Berhasil mengupdate foto!');
         });

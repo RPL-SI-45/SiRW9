@@ -25,7 +25,7 @@ class HomepageTest extends DuskTestCase
                         $card->click('.badge.bg-warning');
                     })
                     ->assertSee('Edit Foto')
-                    ->attach('#image', public_path('uploads\carousel-images\images2.png'))
+                    ->attach('#image', public_path('uploads\carousel-images\test.png'))
                     ->press('Update')
                     ->assertSee('Berhasil mengupdate Carousel Image!');
         });

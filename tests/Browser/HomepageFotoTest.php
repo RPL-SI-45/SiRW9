@@ -22,7 +22,7 @@ class HomepageFotoTest extends DuskTestCase
             ->press('Login')
             ->clickLink('Edit Homepage')
             ->clickLink('Tambahkan Foto Homepage')
-            ->attach('#image', public_path('uploads\photocarousel\photo2.jpg'))
+            ->attach('#image', public_path('uploads\photocarousel\test.jpg'))
             ->press('Tambahkan')
             ->assertSee('Berhasil menambahkan foto baru!');
         });
