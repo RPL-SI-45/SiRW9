@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\PanduanLayanan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PanduanController extends Controller
 {
@@ -39,14 +41,19 @@ class PanduanController extends Controller
     }
 
     public function panduan(Request $request)
-{
-    $panduanlayanans = PanduanLayanan::all();
+    {
+    $panduanlayanan = PanduanLayanan::all();
     $kategori = $request->input('kategori');
     if ($kategori) {
-        $panduanlayanans = PanduanLayanan::where('KategoriPanduan', $kategori)->get();
+        $panduanlayanan = PanduanLayanan::where('KategoriPanduan', $kategori)->get();
     } else {
-        $panduanlayanans = PanduanLayanan::all();
+        $panduanlayanan = PanduanLayanan::all();
     }
-    return view('panduanlayanan.guest', compact('panduanlayanans'));
-}
+    return view('panduanlayanan.guest', compact('panduanlayanan'));
+    }
+
+    public function showpanduan($slug){
+        $panduanlayanan = PanduanLayanan::where('slug', $slug)->first();
+        return view('panduanlayanan.isi', compact('panduanlayanan'));
+    }
 }

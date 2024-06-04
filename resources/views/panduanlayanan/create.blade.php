@@ -1,3 +1,13 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+  <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
+  <style>
+    trix-toolbar [data-trix-button-group='file-tools']{
+        display:none;
+    }
+  </style>
+</head>
 @extends('layouts.admin')
 @section('content')
     <div class="pagetitle">
@@ -19,11 +29,10 @@
                         <label>Judul Panduan Layanan</label>
                         <input name="Judul_Panduan" type="text" class="form-control" id="Judul_Panduan" required>
                     </div>
-                    <div class="col-12">
-                        <label>Isi Panduan</label>
-                        <div>
-                        <textarea class="form-control" name="IsiPanduan" id="IsiPanduan" style="height: 100px;"></textarea>
-                        </div>
+                    <div class="mb-3">
+                        <label for="IsiPanduan" class="form-label">Isi Panduan</label>
+                        <input id="IsiPanduan" type="hidden" name="IsiPanduan">
+                        <trix-editor input="IsiPanduan"></trix-editor>
                     </div>
                     <div class="col-md-8 mb-3">
                         <label>Kategori</label>

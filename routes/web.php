@@ -122,3 +122,4 @@ Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
 
 //panduanlayanan
 Route::get('/panduanlayanan', [PanduanController::class, 'panduan']);
+Route::get('/isipanduan/{slug}', [PanduanController::class, 'showpanduan']);

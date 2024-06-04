@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('Judul_Panduan');
             $table->text('IsiPanduan');
             $table->enum('KategoriPanduan', ['Informasi Umum', 'Pelayanan Administrasi', 'Kegiatan dan Program RW', 'Partisipasi dan Pengaduan Masyarakat']);
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
