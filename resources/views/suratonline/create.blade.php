@@ -12,10 +12,11 @@
     <div class="card">
         <div class="card-body">
               <h5 class="card-title">Lihatlah Panduan Pembuatan Surat Pada</h5><br>
-              <h5><i>link panduan permohonan</h5></i>
+              <h6><a href="/isipanduan/pembuatansurat"><i>link panduan permohonan<a</h6></i>
                 <form id='suratOnlineform' method="POST" action="/suratonline/store" enctype="multipart/form-data" novalidate>
                     @csrf
                     <div class="mb-3">
+                    <br>
                         <label>Nama Lengkap</label>
                         <input name="nama_lengkap" type="text" class="form-control" id="nama_Lengkap" aria-describedby="Nama Lengkap Anda" required>
                     </div>

@@ -20,6 +20,7 @@ class PanduanSeeder extends Seeder
             
             'IsiPanduan' => '
                 <h4><b>Langkah-Langkah Mengajukan Surat Secara Online</b></h4>
+                <br>
                 1. Pilih Jenis Surat:
                 Pilih jenis surat yang ingin diajukan, seperti Surat Pengantar, Surat Keterangan, atau lainnya.
                 <br>

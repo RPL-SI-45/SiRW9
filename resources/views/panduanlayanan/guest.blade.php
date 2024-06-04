@@ -1,13 +1,3 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
-  <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
-
-  <style>
-    trix-toolbar [data-trix-button-group='file-tools']{
-        display:none;
-    }
-  </style>
-</head>
 @extends('layouts.guest')
 @section('content')
     <section id="portfolio" class="portfolio">
@@ -33,9 +23,9 @@
                 @foreach($panduanlayanan as $ply)
                     @if($ply->KategoriPanduan == 'Informasi Umum')
                     <div class="col-lg-12 portfolio-item filter-inum">
-                    @elseif($ply->KategoriPanduan == 'Kegiatan dan Program RW')
-                    <div class="col-lg-12 portfolio-item filter-pead">
                     @elseif($ply->KategoriPanduan == 'Pelayanan Administrasi')
+                    <div class="col-lg-12 portfolio-item filter-pead">
+                    @elseif($ply->KategoriPanduan == 'Kegiatan dan Program RW')
                     <div class="col-lg-12 portfolio-item filter-kepro">
                     @elseif($ply->KategoriPanduan == 'Partisipasi dan Pengaduan Masyarakat')
                     <div class="col-lg-12 portfolio-item filter-ppm">
