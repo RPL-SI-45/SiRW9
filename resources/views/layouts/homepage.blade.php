@@ -42,7 +42,7 @@
           <li><a class="nav-link scrollto" href="/beritakegiatan">Berita Kegiatan</a></li>
           <li class="dropdown"><a href="#"><span>Layanan</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Panduan Layanan</a></li>
+              <li><a href="/panduanlayanan">Panduan Layanan</a></li>
               <li><a href="/suratonline/create">Surat Online</a></li>
               <li><a href="/iurankas">Pembayaran Kas</a></li>
             </ul>
