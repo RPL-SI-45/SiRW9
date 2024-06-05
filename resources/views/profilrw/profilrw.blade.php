@@ -14,7 +14,7 @@
 <div class="container mt-5">
     @if ($profilRW)
         <div class="card shadow p-4 mb-4">
-            <p>{{ $profilRW->description }}</p>
+            <p>{!! $profilRW->description !!}</p>
 
             @if ($profilRW->image)
                 <div class="text-center">
@@ -24,16 +24,16 @@
 
             <div class="text-center mt-4">
                 <a href="/admin/profilrw/edit/{{ $profilRW->id }}" class="btn btn-primary">Edit</a>
-                <a href="/admin/profilrw/create" class="btn btn-success">Create New</a>
+                <!-- <a href="/admin/profilrw/create" class="btn btn-success">Create New</a> -->
             </div>
         </div>
     @else
-        <div class="alert alert-warning" role="alert">
+        <!-- <div class="alert alert-warning" role="alert">
             Profil RW belum tersedia.
         </div>
         <div class="text-center">
             <a href="/admin/profilrw/create" class="btn btn-success">Create New</a>
-        </div>
+        </div> -->
     @endif
 
     <!-- <div class="text-center">

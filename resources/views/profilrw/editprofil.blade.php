@@ -1,6 +1,17 @@
 @extends('layouts.admin')
 
 @section('content')
+<head>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+
+    <style>
+    trix-toolbar [data-trix-button-group='file-tools']{
+        display:none;
+    }
+    </style>
+</head>
+
 <div class="pagetitle">
     <h1>Edit Profil RW</h1>
     <nav>
@@ -20,14 +31,15 @@
 
             <div class="mb-4">
                 <label for="description" class="form-label">Deskripsi:</label>
-                <textarea class="form-control" id="description" name="description" rows="4" required>{{ $profilRW->description }}</textarea>
+                <input id="description" type="hidden" name="description" value="{{ $profilRW->description }}" required>
+                <trix-editor input="description"></trix-editor>
             </div>
 
             <div class="mb-4">
                 <label for="image" class="form-label">Foto:</label>
                 <input type="file" class="form-control" id="image" name="image">
                 @if ($profilRW->image)
-                    <div class="text-center">
+                    <div class="text-center mt-3">
                         <img src="{{ asset($profilRW->image) }}" alt="Foto Profil RW" class="img-fluid">
                     </div>
                 @endif
