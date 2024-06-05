@@ -16,6 +16,7 @@ use App\Models\Usulanwarga;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\PanduanLayanan;
+use App\Http\Controllers\ProfilRWController;
 
 /*
 |--------------------------------------------------------------------------
@@ -116,6 +117,12 @@ Route::middleware(['auth'])->group(function () {
 
     
 
+    //profil RW
+    Route::get('/admin/profilrw', [ProfilRWController::class, 'profilrw'])->name('profilrw');   
+    Route::get('/admin/profilrw/create', [ProfilRWController::class, 'create']);
+    Route::post('/admin/profilrw', [ProfilRWController::class, 'store']);
+    Route::get('/admin/profilrw/edit/{id}', [ProfilRWController::class, 'editProfilrw']);
+    Route::put('/admin/profilrw/update/{id}', [ProfilRWController::class, 'updateProfilrw']); 
 });
 
 //suratonline

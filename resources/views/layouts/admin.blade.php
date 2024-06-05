@@ -150,7 +150,7 @@
 
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
+        <a class="nav-link collapsed" href="/admin/profilrw">
           <i class="bi bi-card-list"></i>
           <span>Profil RW</span>
         </a>
