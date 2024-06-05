@@ -110,3 +110,7 @@ Route::get('/beritakegiatan', [BeritaKegiatanController::class, 'userview']);
 //aduanwarga
 Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
 Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
+
+//aduanwarga
+Route::get('/panduanlayanan', [AduanController::class, 'gcreate']);
+Route::post('/panduanlayanan/store', [AduanController::class, 'gstore']);
