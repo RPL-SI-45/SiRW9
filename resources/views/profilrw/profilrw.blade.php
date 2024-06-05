@@ -11,7 +11,7 @@
     </nav>
 </div>
 
-<div class="container mt-5">
+<div class="container">
     @if ($profilRW)
         <div class="card shadow p-4 mb-4">
             <p>{!! $profilRW->description !!}</p>
