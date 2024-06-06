@@ -1,32 +1,33 @@
 @extends('layouts.guest')
 @section('content')
   <br>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active">Profil RW</li>
-        </ol>
-      </nav>
-  <footer id="footer">
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Profil RW</li>
+    </ol>
+  </nav>
 
-          <div class="footer-contact">
-            <h3> Profil RW </h3>
-            <img src="uploads/profilrw/denah.jpg" class="img-fluid" alt="...">
-            <br>
-            <br>
-            <p>Kami adalah pengurus RW yang berdedikasi untuk melayani dan memajukan kesejahteraan seluruh warga di lingkungan kami. Dengan semangat gotong royong dan kebersamaan, kami siap menjaga keamanan, ketertiban, serta meningkatkan kualitas hidup bersama di RW ini.</p>
-            <br>
-              <i><b>Solidaritas Terwujud, Ciptakan RW yang Unggul dan Harmonis!"</i></b><br>
-              <br>
-            </p>
+  <section id="profil-rw" class="profil-rw">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+            <h2>Profil RW</h2>
           </div>
+
+          <div class="profil-rw-content">
+            <p>{!! $profilRW->description !!}</p>
+
+            @if ($profilRW->image)
+              <div class="text-center">
+                <img src="{{ asset($profilRW->image) }}" alt="Profil RW" class="img-fluid rounded">
+              </div>
+            @endif
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
 @endsection

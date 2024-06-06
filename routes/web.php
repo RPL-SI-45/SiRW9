@@ -114,4 +114,4 @@ Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
 Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
 
 //profile
-Route::get('/profilrw/index', [ProfilRWController::class, 'index']);
+Route::get('/profilRW', [ProfilRWController::class, 'index']);
