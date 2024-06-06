@@ -18,9 +18,8 @@
         <div class="row">
 
           <div class="footer-contact">
-            <h3> Pengurus RW </h3>
-            <img src="uploads/profilrw/denah.jpg" class="rounded float-start" alt="...">
-            <img src="uploads/profilrw/denah.jpg" class="rounded float-end" alt="...">
+            <h3> Profil RW </h3>
+            <img src="C:\Users\Grace\Downloads\profilRW.jpg" class="img-fluid" alt="...">
             <br>
             <br>
             <p>Kami adalah pengurus RW yang berdedikasi untuk melayani dan memajukan kesejahteraan seluruh warga di lingkungan kami. Dengan semangat gotong royong dan kebersamaan, kami siap menjaga keamanan, ketertiban, serta meningkatkan kualitas hidup bersama di RW ini.</p>
