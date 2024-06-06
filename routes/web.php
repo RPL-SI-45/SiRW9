@@ -5,6 +5,7 @@ use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\AduanController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProfilRWController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UsulanController;
 use App\Http\Controllers\SessionController;
@@ -113,4 +114,4 @@ Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
 Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
 
 //profile
-Route::get('/profilerw/index', [ProfileController::class, 'index']);
+Route::get('/profilrw/index', [ProfilRWController::class, 'index']);
