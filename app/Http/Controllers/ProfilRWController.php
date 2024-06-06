@@ -91,4 +91,12 @@ class ProfilRWController extends Controller
         // Redirect kembali ke halaman profil RW dengan pesan sukses
         return redirect('/admin/profilrw')->with('success', 'Profil RW berhasil diperbarui');
     }
+
+    public function index()
+    {
+        $profilRW = ProfilRW::first();
+        return view('profilrw.index', compact('profilRW'));
+    }
+
+   
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\AduanController;
 use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\CarouselImageController;
+use App\Http\Controllers\ProfilRWController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UsulanController;
 use App\Http\Controllers\SessionController;
@@ -16,8 +17,6 @@ use App\Models\Usulanwarga;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Models\PanduanLayanan;
-use App\Http\Controllers\ProfilRWController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -144,6 +143,9 @@ Route::get('/beritakegiatan', [BeritaKegiatanController::class, 'userview']);
 //aduanwarga
 Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
 Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
+
+//profile
+Route::get('/profilRW', [ProfilRWController::class, 'index']);
 
 //panduanlayanan
 Route::get('/panduanlayanan', [PanduanController::class, 'panduan']);

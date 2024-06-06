@@ -17,4 +17,4 @@ class DatabaseSeeder extends Seeder
         $this->call(PanduanSeeder::class);
         $this->call(ProfilRWSeeder::class);
     }
-}
+};
