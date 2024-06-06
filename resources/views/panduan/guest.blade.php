@@ -19,6 +19,7 @@
             <p>Temukan solusi pertanyaan dan permasalahan anda dengan panduan layanan di bawah.</p>
             <p>Pilih kategori sesuai dengan permasalahan anda.</p>
         </div>
+
         <ul id="portfolio-flters" class="flex justifiy-content-center" data-aos="fade-up" data-aos-delay="50" style="text-align: center; align-items:center">
             <li data-filter="*" class="filter-active">Semua</li>
             <li data-filter=".filter-inum">Informasi Umum</li>

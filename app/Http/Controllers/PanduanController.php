@@ -2,36 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\PanduanLayanan;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
-
 class PanduanController extends Controller
 {
-    public function index(){
-        $panduanlayanan = PanduanLayanan::all();
-        return view('panduanlayanan.index',compact(['panduanlayanan']));
-    }
-
-    public function gpanduan(Request $request)
+    public function index()
     {
-        $panduanlayanan = PanduanLayanan::all(); {
+        $panduanlayanan = PanduanLayanan::all();
+        return view('panduan.index', compact(['panduanlayanan']));
+    }
+    public function panduan(Request $request)
+    {
+        $panduanlayanan = PanduanLayanan::all();
+        $kategori = $request->input('kategori');
+        if ($kategori) {
+            $panduanlayanan = PanduanLayanan::where('KategoriPanduan', $kategori)->get();
+        } else {
             $panduanlayanan = PanduanLayanan::all();
-            $kategori = $request->input('kategori');
-            if ($kategori) {
-                $panduanlayanan = PanduanLayanan::where('KategoriPanduan', $kategori)->get();
-            } else {
-                $panduanlayanan = PanduanLayanan::all();
-            }
-            return redirect('/panduanlayanan');
         }
+        return view('panduan.guest', compact('panduanlayanan'));
     }
 
-    public function blogpanduan($slug)
+    public function showpanduan($slug)
     {
         $panduanlayanan = PanduanLayanan::where('slug', $slug)->first();
-        return view('panduanlayanan.isi', compact('panduanlayanan'));
+        return view('panduan.blog', compact('panduanlayanan'));
     }
 }

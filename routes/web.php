@@ -112,5 +112,5 @@ Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
 Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
 
 //aduanwarga
-Route::get('/panduanlayanan', [PanduanController::class, 'gpanduan']);
-Route::get('/blogpanduan/{slug}', [PanduanController::class, 'blogpanduan']);
+Route::get('/panduanlayanan', [PanduanController::class, 'panduan']);
+Route::get('/blogpanduan/{slug}', [PanduanController::class, 'showpanduan']);
