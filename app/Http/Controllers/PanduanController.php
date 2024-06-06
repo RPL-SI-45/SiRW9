@@ -10,50 +10,28 @@ use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PanduanController extends Controller
 {
-    public function store(Request $request)
-    {
-        PanduanLayanan::create($request->except(['_token', 'submit']));
-        return redirect('/panduanlayanan');
-    }
-    public function edit($id)
-    {
-        $panduanlayanan = PanduanLayanan::find($id);
-        return view('panduanlayanan.edit', compact(['panduanlayanan']));
-    }
-    public function update($id, Request $request)
-    {
-        $panduanlayanan = PanduanLayanan::find($id);
-        $panduanlayanan->update($request->except(['_token', 'submit']));
-        return redirect('/panduanlayanan');
-    }
-    public function destroy($id)
-    {
-        $panduanlayanan = PanduanLayanan::find($id);
-        $panduanlayanan->delete();
-        return redirect('/panduanlayanan');
-    }
-    public function panduan(Request $request)
-    {
-        $panduanlayanans = PanduanLayanan::all();
-        {
+    public function index(){
         $panduanlayanan = PanduanLayanan::all();
-        $kategori = $request->input('kategori');
-        if ($kategori) {
-            $panduanlayanans = PanduanLayanan::where('KategoriPanduan', $kategori)->get();
-            $panduanlayanan = PanduanLayanan::where('KategoriPanduan', $kategori)->get();
-        } else {
-            $panduanlayanans = PanduanLayanan::all();
-            $panduanlayanan = PanduanLayanan::all();
-        }
-        return view('panduanlayanan.guest', compact('panduanlayanan'));
-        }
-    
-        public function showpanduan($slug){
-            $panduanlayanan = PanduanLayanan::where('slug', $slug)->first();
-            return view('panduanlayanan.isi', compact('panduanlayanan'));
-        }
-        return view('panduanlayanan.guest', compact('panduanlayanans'));
+        return view('panduanlayanan.index',compact(['panduanlayanan']));
     }
 
+    public function gpanduan(Request $request)
+    {
+        $panduanlayanan = PanduanLayanan::all(); {
+            $panduanlayanan = PanduanLayanan::all();
+            $kategori = $request->input('kategori');
+            if ($kategori) {
+                $panduanlayanan = PanduanLayanan::where('KategoriPanduan', $kategori)->get();
+            } else {
+                $panduanlayanan = PanduanLayanan::all();
+            }
+            return redirect('/panduanlayanan');
+        }
+    }
 
+    public function blogpanduan($slug)
+    {
+        $panduanlayanan = PanduanLayanan::where('slug', $slug)->first();
+        return view('panduanlayanan.isi', compact('panduanlayanan'));
+    }
 }

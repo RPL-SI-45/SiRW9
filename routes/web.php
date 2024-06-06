@@ -4,6 +4,7 @@ use App\Http\Controllers\BeritaKegiatanController;
 use App\Http\Controllers\IuranKasController;
 use App\Http\Controllers\data_pendudukController;
 use App\Http\Controllers\AduanController;
+use App\Http\Controllers\PanduanController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UsulanController;
 use App\Http\Controllers\SessionController;
@@ -53,7 +54,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/suratonline/create', [SuratController::class, 'admincreate']);
     Route::post('/admin/suratonline/store', [SuratController::class, 'store']);
     Route::get('/admin/suratonline/{id}/edit', [SuratController::class, 'edit']);
-    Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);    
+    Route::put('/admin/suratonline/{id}', [SuratController::class, 'update']);
     Route::delete('/admin/suratonline/{id}', [SuratController::class, 'destroy']);
 
     //usulanwarga
@@ -80,15 +81,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/account-settings', [UserController::class, 'accountSettings'])->name('account.settings');
     Route::post('/admin/account-settings/change-password', [UserController::class, 'changePassword'])->name('change.password');
     Route::post('/logout', [UserController::class, 'logout'])->name('logout');
-    
+
     //pengaduanwarga(adm)
     Route::get('/admin/pengaduanwarga', [AduanController::class, 'index']);
     Route::get('/admin/pengaduanwarga/create', [AduanController::class, 'create']);
-    Route::post('/admin/pengaduanwarga/store', [AduanController::class, 'store']); 
+    Route::post('/admin/pengaduanwarga/store', [AduanController::class, 'store']);
     Route::get('/admin/pengaduanwarga/edit/{id}', [AduanController::class, 'edit']);
     Route::put('/admin/pengaduanwarga/{id}', [AduanController::class, 'update']);
     Route::delete('/admin/pengaduanwarga/delete/{id}', [AduanController::class, 'destroy']);
-
 });
 
 //suratonline
@@ -112,5 +112,5 @@ Route::get('/aduanwarga/create', [AduanController::class, 'gcreate']);
 Route::post('/aduanwarga/store', [AduanController::class, 'gstore']);
 
 //aduanwarga
-Route::get('/panduanlayanan', [AduanController::class, 'gcreate']);
-Route::post('/panduanlayanan/store', [AduanController::class, 'gstore']);
+Route::get('/panduanlayanan', [PanduanController::class, 'gpanduan']);
+Route::get('/blogpanduan/{slug}', [PanduanController::class, 'blogpanduan']);
