@@ -24,8 +24,9 @@ class ProfilRWEditTest extends DuskTestCase
             ->clickLink('Edit Profil RW')
             ->keys('trix-editor[input="description"]', 'Test Isi Panduan')
             ->attach('#image', public_path('uploads\photocarousel\test.jpg'))
-            ->scrollTo('Simpan Perubahan')
-            ->clickLink('Simpan Perubahan');
+            ->scrollIntoView('#simpan')
+            ->waitFor('#simpan')
+            ->press('Simpan Perubahan');
         });
     }
 }
