@@ -46,7 +46,7 @@
                         </select>
                     </div>
                     <div class="text-center">
-                        <input type="submit" name="submit" class="btn btn-primary" value='Edit Panduan Layanan'> 
+                        <button type="submit" class="btn btn-primary">Edit</button>
                     </div>
                 </form>
             </div>
