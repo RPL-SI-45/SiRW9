@@ -10,7 +10,7 @@
                 <h1>Selamat Datang!</h1>
                 <h2>Di website RW IX Kelurahan Banyumanik, Kecamatan Banyumanik, Kota Semarang.</h2>
                 <div class="d-flex justify-content-center justify-content-lg-start">
-                    <a href="#about" class="btn-get-started scrollto">Profil RW</a>
+                    <a href="/profilRW" class="btn-get-started scrollto">Lihat Profil RW</a>
                 </div>
             </div>
             <div class="col-lg-7 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">

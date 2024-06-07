@@ -19,4 +19,12 @@ class ProfilRWGuestTest extends DuskTestCase
             ->assertPathIs('/profilRW');  ;
         });
     }
+    public function testExample2(): void
+    {
+        $this->browse(function (Browser $browser) {
+            $browser->visit('http://127.0.0.1:8000/')        
+            ->clickLink('Lihat Profil RW')
+            ->assertPathIs('/profilRW');  ;
+        });
+    }
 }
