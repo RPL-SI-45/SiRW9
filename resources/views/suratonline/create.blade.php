@@ -12,7 +12,7 @@
     <div class="card">
         <div class="card-body">
               <h5 class="card-title">Lihatlah Panduan Pembuatan Surat Pada</h5><br>
-              <h6><a href="/isipanduan/pembuatansurat"><i>link panduan permohonan<a</h6></i>
+              <h6><a href="/isipanduan/pembuatansurat"><i>link panduan permohonan</i></a></h6>
                 <form id='suratOnlineform' method="POST" action="/suratonline/store" enctype="multipart/form-data" novalidate>
                     @csrf
                     <div class="mb-3">
