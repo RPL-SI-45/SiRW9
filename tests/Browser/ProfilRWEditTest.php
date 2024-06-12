@@ -26,6 +26,7 @@ class ProfilRWEditTest extends DuskTestCase
             ->attach('#image', public_path('uploads\photocarousel\test.jpg'))
             ->scrollIntoView('#simpan')
             ->waitFor('#simpan')
+            ->pause(1000)
             ->press('Simpan Perubahan');
         });
     }
